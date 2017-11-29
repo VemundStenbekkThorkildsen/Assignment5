@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.21)  29 NOV 2017 14:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.2)  29 NOV 2017 17:19
 entering extended mode
 **./Assignment5.tex
 (Assignment5.tex
@@ -439,7 +439,7 @@ Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen112
 \Gin@req@width=\dimen113
 )
-(C:\Users\vemun\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.sty
+(C:\Users\sande\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.sty
 \lst@mode=\count100
 \lst@gtempboxa=\box28
 \lst@token=\toks22
@@ -453,22 +453,22 @@ Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 \lst@lineno=\count105
 \lst@maxwidth=\dimen117
 
-(C:\Users\vemun\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
+(C:\Users\sande\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 \c@lstnumber=\count106
 \lst@skipnumbers=\count107
 \lst@framebox=\box29
 )
-(C:\Users\vemun\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.cfg
+(C:\Users\sande\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.cfg
 File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
-(C:\Users\vemun\AppData\Roaming\MiKTeX\2.9\tex\latex\refstyle\refstyle.sty
+(C:\Users\sande\AppData\Roaming\MiKTeX\2.9\tex\latex\refstyle\refstyle.sty
 Package: refstyle 2010/11/02 v0.5 Reference formatting (DNJ Els)
 Package refstyle Info: Config file refstyle.cfg used on input line 322.
 
-(C:\Users\vemun\AppData\Roaming\MiKTeX\2.9\tex\latex\refstyle\refstyle.cfg
+(C:\Users\sande\AppData\Roaming\MiKTeX\2.9\tex\latex\refstyle\refstyle.cfg
 File: refstyle.cfg 2010/11/02 0.5 Configuration file for refstyle (DNJ Els)
 Package refstyle Info: New reference template \newref{part} on input line 468.
 Package refstyle Info: \partkey created on input line 468.
@@ -527,13 +527,13 @@ Package refstyle Info: \fnrangeref created on input line 568.
 Package refstyle Info: \Fnrangeref created on input line 568.
 Package refstyle Info: \fnpageref created on input line 568.
 ))
-(C:\Users\vemun\AppData\Roaming\MiKTeX\2.9\tex\latex\wasysym\wasysym.sty
+(C:\Users\sande\AppData\Roaming\MiKTeX\2.9\tex\latex\wasysym\wasysym.sty
 Package: wasysym 2003/10/30 v2.0 Wasy-2 symbol support package
 \symwasy=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
 (Font)                  U/wasy/m/n --> U/wasy/b/n on input line 90.
 )
-(C:\Users\vemun\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
+(C:\Users\sande\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\bm.sty"
@@ -624,7 +624,7 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4751.
 \c@Hy@tempcnt=\count111
 
-(C:\Users\vemun\AppData\Roaming\MiKTeX\2.9\tex\latex\url\url.sty
+(C:\Users\sande\AppData\Roaming\MiKTeX\2.9\tex\latex\url\url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -696,7 +696,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks25
 \@floatcapt=\box31
 )
-(C:\Users\vemun\AppData\Roaming\MiKTeX\2.9\tex\latex\commath\commath.sty
+(C:\Users\sande\AppData\Roaming\MiKTeX\2.9\tex\latex\commath\commath.sty
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )) (Assignment5.aux)
@@ -717,7 +717,7 @@ LaTeX Font Info:    ... okay on input line 45.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 45.
 LaTeX Font Info:    ... okay on input line 45.
 
-(C:\Users\vemun\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+(C:\Users\sande\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count122
 \scratchdimen=\dimen130
@@ -811,48 +811,86 @@ Underfull \hbox (badness 10000) in paragraph at lines 64--66
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 75--77
+Underfull \hbox (badness 10000) in paragraph at lines 71--73
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--78
+
+ []
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 78.
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 78.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+wasy on input line 78.
+
+(C:\Users\sande\AppData\Roaming\MiKTeX\2.9\tex\latex\wasysym\uwasy.fd
+File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
+)
+
+LaTeX Font Warning: Font shape `U/wasy/b/n' in size <7> not available
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 78.
+
+
+LaTeX Font Warning: Font shape `U/wasy/b/n' in size <5> not available
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 78.
+
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 87--89
+Underfull \hbox (badness 10000) in paragraph at lines 125--127
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 98--100
+Underfull \hbox (badness 10000) in paragraph at lines 137--139
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 107--109
+Underfull \hbox (badness 10000) in paragraph at lines 148--150
 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 111.
 [6]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 111.
+Underfull \hbox (badness 10000) in paragraph at lines 157--159
+
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 161.
+[7]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 161.
  (Assignment5.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 111.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 111.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 161.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 161.
 Package rerunfilecheck Info: File `Assignment5.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 111.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 161.
  ) 
 Here is how much of TeX's memory you used:
- 9144 strings out of 493323
- 127913 string characters out of 3139066
- 232529 words of memory out of 3000000
- 12578 multiletter control sequences out of 15000+200000
- 4246 words of font info for 16 fonts, out of 3000000 for 9000
+ 9209 strings out of 493323
+ 128968 string characters out of 3139066
+ 236529 words of memory out of 3000000
+ 12613 multiletter control sequences out of 15000+200000
+ 9557 words of font info for 37 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 28i,5n,40p,313b,323s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 28i,7n,40p,313b,323s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on Assignment5.pdf (6 pages, 187822 bytes).
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmsy7.pfb>
+Output written on Assignment5.pdf (7 pages, 245039 bytes).
 PDF statistics:
- 42 PDF objects out of 1000 (max. 8388607)
- 7 named destinations out of 1000 (max. 500000)
+ 72 PDF objects out of 1000 (max. 8388607)
+ 8 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
