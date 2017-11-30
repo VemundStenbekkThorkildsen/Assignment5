@@ -10,8 +10,6 @@ void crankNicolson(){
 
 
 
-
-
 void bwdEuler(int n, int tsteps, double delta_x, double alpha)
 {
   double a, b, c;
@@ -22,7 +20,7 @@ void bwdEuler(int n, int tsteps, double delta_x, double alpha)
   a = c = - alpha;
   b = 1 + 2*alpha;
   for (int t = 1; t <= tsteps; t++) {
-    tridag(n, y, a, b, c, v);
+    tridag(n, y, a, b, c, u);
     u(0) = u(n) = 0;
     for (int i = 0; i <= n; i++) {
       y(i) = u(i);
@@ -33,7 +31,7 @@ void bwdEuler(int n, int tsteps, double delta_x, double alpha)
 }
 
 
-void tridiag(int n, vec& y, double a, double b, double c, vec& v)
+void tridiag(int n, vec& y, double a, double b, double c, vec& u)
 {
     vec b_tilde(n);
     vec y_tilde(n);
@@ -45,13 +43,20 @@ void tridiag(int n, vec& y, double a, double b, double c, vec& v)
         b_tilde(i) = b - (c*a)/b_tilde(i-1);
         y_tilde(i) = y(i) - (b_tilde(i-1)*c/b_tilde(i-1);
     }
-    v(n-1) = y(n-1)/b_tilde(n-1);
+    u(n-1) = y(n-1)/b_tilde(n-1);
     for (int k = n-2; k>=0; k--){
-        v(k) = (y_tilde(k) + v(k+1))/b_tilde(k);
+        u(k) = (y_tilde(k) + u(k+1))/b_tilde(k);
     }
 }
 
 
 int main(int argc, char *argv[]){
   //TODO initialize the entire system
+int n, int t_max;
+double delta_x;
+
+if (argv = 4){
+  
+}
+
 }
