@@ -1,15 +1,21 @@
-#include "iostream"
-#include "fstream"
+#include <iostream>
+#include <fstream>
 #include "armadillo"
 
 using namespace arma;
 using namespace std;
 
-void crankNicolson(){
-  //TODO construct Crank-Nicolson
-  //My estimate is that it has to test the theta factor
-  //and then call either bwdEuler or fwdEuler.
+
+void writeToFile(vec& u, int n, string filename)
+{
+  ofstream outfile(filename);
+  //for (int i = 1; i < n; i++){
+  outfile << u << endl;
+
+  outfile.close();
+  //}
 }
+
 
 void tridiag(int n, vec& y, double a, double b, double c, vec& u)
 {
@@ -29,6 +35,7 @@ void tridiag(int n, vec& y, double a, double b, double c, vec& u)
     }
 }
 
+
 void bwdEuler(int n, int tsteps, double alpha)
 {
   double a, b, c;
@@ -44,9 +51,16 @@ void bwdEuler(int n, int tsteps, double alpha)
     for (int i = 0; i <= n; i++) {
       y(i) = u(i);
     }
-    //y.print()
   }
-  y.print();
+  string bwdfile = "../../data/bwd" + to_string(n) + ".txt";
+  writeToFile(u, n, bwdfile);
+}
+
+
+void crankNicolson(){
+  //TODO construct Crank-Nicolson
+  //My estimate is that it has to test the theta factor
+  //and then call either bwdEuler or fwdEuler.
 }
 
 
@@ -74,8 +88,6 @@ tsteps = t_max/dt;
 double alpha = dt/(dx*dx);
 
 bwdEuler(n, tsteps, alpha);
-
-
 
 
 }
