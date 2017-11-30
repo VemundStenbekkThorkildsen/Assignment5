@@ -73,13 +73,11 @@ Method
 
 \noindent The implicit schemes are differential equations that can be rewritten as a set of linear equations. The Euler forward, Euler backward and Crank-Nicolson scheme are all implicit and can therefore be written in term of linear equations after scaling:
 \\
-Euler backwards, first derivative:
+Euler backwards:
 \\
 $$
 u_t \approx \frac{u(x_i,t_j) - u(x_i,t_j - \Delta t)}{\Delta t}
 $$
-
-\noindent Second derivative:
 
 $$
 u_{xx} \approx \frac{u(x_i + \Delta x,t_j) - 2u(x_i,t_j) + u(x_i - \Delta x,t_j)}{\Delta x^2}
@@ -113,15 +111,82 @@ $$
 V_j = A^{-j}V_0
 $$
 
-\noindent A very similar process can be applied to the Euler forward method:
+\noindent A very similar process can be applied to the Euler forward method, but this scheme is explicit:
 
 $$
 u_t = \frac{u(x_i,t_j + \Delta t) - u(x_i,t_j)}{\Delta t}
 $$
 
 $$
-u_{xx} = 
+u_{xx} \approx \frac{u(x_i + \Delta x,t_j) - 2u(x_i,t_j) + u(x_i - \Delta x,t_j)}{\Delta x^2} 
 $$
+
+$$
+u_{i,j-1} = \alpha u_{i-1,j} + (1 - 2\alpha)u_{i,j} + \alpha u_{i+1,j}
+$$
+
+$$
+A = \begin{bmatrix}
+1 - 2\alpha & \alpha & 0 & 0 &\cdots\\
+\alpha & 1 - 2\alpha & \alpha & 0 & \cdots\\
+\cdots & \cdots & \cdots & \cdots & \cdots\\
+0 & 0 & \cdots & \alpha & 1 - 2\alpha\\
+
+\end{bmatrix}
+$$
+
+\noindent such that:
+
+$$
+A^{-1}(AV_j) = A^{-1}(V_{j-1})
+$$
+
+\noindent We generalize again and get:
+
+$$
+V_j = A^{-j}V_0
+$$
+
+\noindent The Crank-Nicolson scheme is is a combination of both implicit and explicit schemes, namely the Euler forward and Euler backward method.
+
+$$
+\frac{\theta}{\Delta x^2}(u_{i-1,j} - 2u_{i,j} + u_{i+1,j}) + \frac{1 - \theta}{\Delta x^2}(u_{i+1,j-1} - 2u_{i,j-1} + u_{i-1,j-1}) = \frac{1}{\Delta t}(u_{i,j} - u_{i,j-1})
+$$
+
+\noindent where $\theta$ determines whether the scheme is explicit when $\theta = 0$, or implicit when $\theta = 1$. However, it is when $\theta = 1/2$ where we have the actual Crank-Nicolson scheme which is stable for all $\Delta x$ and $\Delta t$. To derive the Crank-Nicolson scheme we begin with the forward Euler method and Taylor expand $u(x,t + \delta t)$, $u(x + \delta x,t)$, $u(x - \delta x,t)$, $u(x + \delta x, t + \Delta t)$ and $u(x + \delta x, t + \Delta t)$ for $t + \Delta t/2$.\\
+
+\noindent Again we scale the equation with $\alpha = \frac{\Delta t}{\Delta x^2}$ which results in the following equation:
+
+$$
+-\alpha u_{i-1,j} + (2 + 2\alpha)u_{i,j} -\alpha u_{i+1,j} = \alpha u_{i-1,j-1} + (2-2\alpha)u_{i,j-1} + \alpha u_{i+1,j-1}
+$$
+
+\noindent which can be rewritten as
+
+$$
+(2I + \alpha B)V_j = (2I - \alpha B)V_{j-1}
+$$
+
+$$
+V_j = (2I + \alpha B)^{-1}(2I - \alpha B)V_{j-1}
+$$
+
+\noindent where I is the identity matrix and B is given by:
+
+$$
+B = \begin{bmatrix}
+2 & -1 & 0 & \cdots &0\\
+-1 & 2 & -1 & 0 & \vdots\\
+\vdots & \ddots & \ddots & \ddots & \vdots\\
+\vdots & 0 & \ddots & \ddots & -1\\
+0 & \cdots & \cdots & -1 & 2\\
+
+\end{bmatrix}
+$$
+
+
+
+
 
 
 \newpage
@@ -130,7 +195,25 @@ Results
 }\\
 
 
+\noindent The truncation errors and stability is calculated in the Taylor expansion and these values are shown in the table below:
 
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+Method & Truncation error & Stability for\\
+\hline
+Euler Forward & $\Delta x^2$, $\Delta t$ & $\Delta x^2$ and $\Delta t^2$\\
+\hline
+Euler Backward & $\Delta x^2$, $\Delta t$ & $\Delta x^2$ and $\Delta t^2$\\
+\hline
+Crank-Nicolson & $\Delta x^2$, $\Delta t^2$ & $\frac{1}{2} \Delta x^2 \geq \Delta t$\\
+\hline
+\end{tabular}
+\caption{Truncation errors and stability for the three methods}
+\label{truncstab}
+\end{table}
 
 
 
@@ -141,7 +224,7 @@ Results
 Discussion
 }\\
 
-
+From Table \ref{truncstab}
 
 
 
