@@ -1,6 +1,9 @@
+#include "iostream"
+#include "fstream"
 #include "armadillo"
 
 using namespace arma;
+using namespace std;
 
 void crankNicolson(){
   //TODO construct Crank-Nicolson
@@ -20,7 +23,7 @@ void bwdEuler(int n, int tsteps, double delta_x, double alpha)
   a = c = - alpha;
   b = 1 + 2*alpha;
   for (int t = 1; t <= tsteps; t++) {
-    tridag(n, y, a, b, c, u);
+    tridag(n+1, y, a, b, c, u);
     u(0) = u(n) = 0;
     for (int i = 0; i <= n; i++) {
       y(i) = u(i);
@@ -52,11 +55,22 @@ void tridiag(int n, vec& y, double a, double b, double c, vec& u)
 
 int main(int argc, char *argv[]){
   //TODO initialize the entire system
-int n, int t_max;
-double delta_x;
-
-if (argv = 4){
-  
+int n, int t_max, int tsteps;
+double dx, double dt;
+if (argv >= 4){
+  n = argv[1];
+  t_max = argv[2];
+  dx = argv[3];
+} else {
+  cout << "Bad usage" << endl;
 }
+
+dt = dx^2/4;
+tsteps = 
+
+bwdEuler(n, )
+
+
+
 
 }
