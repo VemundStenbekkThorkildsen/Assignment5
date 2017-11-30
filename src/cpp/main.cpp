@@ -50,10 +50,13 @@ void bwdEuler(int n, int tsteps, double delta_x, double alpha)
 }
 
 
-int main(int argc, char *argv[])
+int main(/*int argc, char *argv[]*/)
 {
+
 int n, t_max, tsteps;
 double dx, dt;
+
+/*
 if (argc > 3){
   n = atoi(argv[1]);
   t_max = atoi(argv[2]);
@@ -61,8 +64,11 @@ if (argc > 3){
 } else {
   cout << "Bad usage" << endl;
 }
+*/
 
+dx = 0.01;
 dt = (dx*dx)/4;
+t_max = 10;
 tsteps = t_max/dt;
 double alpha = dt/(dx*dx);
 
