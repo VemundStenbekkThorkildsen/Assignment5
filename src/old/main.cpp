@@ -28,7 +28,7 @@ void bwdEuler(int n, int tsteps, double delta_x, double alpha)
     for (int i = 0; i <= n; i++) {
       y(i) = u(i);
     }
-    y.print()
+    //y.print()
   }
   y.print()
 }
@@ -53,8 +53,8 @@ void tridiag(int n, vec& y, double a, double b, double c, vec& u)
 }
 
 
-int main(int argc, char *argv[]){
-  //TODO initialize the entire system
+int main(int argc, char *argv[])
+{  
 int n, int t_max, int tsteps;
 double dx, double dt;
 if (argv >= 4){
@@ -66,9 +66,10 @@ if (argv >= 4){
 }
 
 dt = dx^2/4;
-tsteps = 
+tsteps = t_max/dt;
+double alpha = dt/(dx*dx);
 
-bwdEuler(n, )
+bwdEuler(n, tsteps, dx, alpha)
 
 
 
