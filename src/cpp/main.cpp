@@ -29,7 +29,7 @@ void tridiag(int n, vec& y, double a, double b, double c, vec& u)
     }
 }
 
-void bwdEuler(int n, int tsteps, double delta_x, double alpha)
+void bwdEuler(int n, int tsteps, double alpha)
 {
   double a, b, c;
   vec u = zeros(n+1);
@@ -50,29 +50,30 @@ void bwdEuler(int n, int tsteps, double delta_x, double alpha)
 }
 
 
-int main(/*int argc, char *argv[]*/)
+int main(int argc, char *argv[]) //n,tmax,dx
 {
 
 int n, t_max, tsteps;
 double dx, dt;
 
-/*
-if (argc > 3){
+
+if (argc == 4){
   n = atoi(argv[1]);
   t_max = atoi(argv[2]);
   dx = atof(argv[3]);
 } else {
   cout << "Bad usage" << endl;
+  exit(1);
 }
-*/
 
-dx = 0.01;
+
+//dx = 0.01;
 dt = (dx*dx)/4;
-t_max = 10;
+//t_max = 10;
 tsteps = t_max/dt;
 double alpha = dt/(dx*dx);
 
-bwdEuler(n, tsteps, dx, alpha);
+bwdEuler(n, tsteps, alpha);
 
 
 
