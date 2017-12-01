@@ -1,18 +1,13 @@
-<<<<<<< HEAD
-#include "iostream"
-#include "fstream"
-#include <armadillo>
-=======
 #include <iostream>
 #include <fstream>
 #include "armadillo"
->>>>>>> bb1d8fe993e3b641db633a97ad2736fc1b18f414
+
 
 using namespace arma;
 using namespace std;
 
 
-void writeToFile(vec& u, int n, string filename)
+void writeToFile(vec& u, string filename)
 {
   ofstream outfile(filename);
   //for (int i = 1; i < n; i++){
@@ -59,7 +54,7 @@ void bwdEuler(int n, int tsteps, double alpha)
     }
   }
   string bwdfile = "../../data/bwd" + to_string(n) + ".txt";
-  writeToFile(u, n, bwdfile);
+  writeToFile(u, bwdfile);
 }
 
 
@@ -76,12 +71,8 @@ int main(int argc, char *argv[]) //n,tmax,dx
 int n, t_max, tsteps;
 double dx, dt;
 
-<<<<<<< HEAD
-if (argc > 3){
-=======
 
 if (argc == 4){
->>>>>>> bb1d8fe993e3b641db633a97ad2736fc1b18f414
   n = atoi(argv[1]);
   t_max = atoi(argv[2]);
   dx = atof(argv[3]);
@@ -90,18 +81,15 @@ if (argc == 4){
   exit(1);
 }
 
-<<<<<<< HEAD
 dt = (dx*dx)/4;
-=======
+
 
 //dx = 0.01;
 dt = (dx*dx)/4;
 //t_max = 10;
->>>>>>> bb1d8fe993e3b641db633a97ad2736fc1b18f414
 tsteps = t_max/dt;
 double alpha = dt/(dx*dx);
 
 bwdEuler(n, tsteps, alpha);
-
-
+cout << y_tilde;
 }
