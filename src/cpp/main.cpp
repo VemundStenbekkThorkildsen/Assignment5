@@ -15,69 +15,67 @@ void writeToFile(vec& u, string filename)
 }
 
 
-void tridiag(int n, vec& y, double a, double b, double c, vec& u)
+void trisolver(double a, double b, double c, int n, vec& v_prev, vec& v)
 {
-    vec b_tilde = zeros(n);
-    vec y_tilde = zeros(n);
+  vec u(n);
+  vec l(n);
 
-    b_tilde(0) = b;
-    y_tilde(0) = y(0);
-
-    for (int i = 1; i < n; i++){
-        b_tilde(i) = b - (c*a)/b_tilde(i-1);
-        y_tilde(i) = y(i) - (y_tilde(i-1)*c/b_tilde(i-1));
-    }
-    //print
-
-    //b_t * u_n-1 + c*u_n = y_t_n-1
-    u(n-1) = (y(n-1)-c*u(n))/b_tilde(n-1);
-    for (int k = n-2; k>0; k--){
-        u(k) = (y_tilde(k) - c*u(k+1))/b_tilde(k);
+  u.fill(b);
+  l.fill(a);
+  for(int i=0; i <n-1; i++){
+    l(i) = a/u(i);
+    u(i+1) = b-l(i)*c;
+  }
+  for(int j=1; j<n; j++){
+      v(j) = v_prev(j) - l(j-1)*v(j-1);
     }
 
+  v(n-1) = v(n-1)/u(n-1);
+  for(int k=n-2; k>0; k--){
+      v(k) = (v(k) - c*v(k+1))/u(k);
+    }
 }
 
 
-void fwdEuler(int n, int tsteps, double alpha){
+void fwdEuler(int n, int tsteps, double alpha)
+{
+  vec unew = zeros(n+1);
+  vec u = zeros(n+1);
+  u(0) = unew(0) = 0;
+  u(n) = unew(n) = 1;
 
-    vec y = zeros(n+1);
-    vec u = zeros(n+1);
-    double a = alpha;
-    double b = 1 - 2*alpha;
-    double c = alpha;
-    for(int t = 1; t <= tsteps; t++){
-        u(0) = u(n) = 0;
-        tridiag(n,y,a,b,c,u);
-        for(int i = 0; i<=n; i++){
-            y(i) = u(i);
-        }
+  for (int t = 1; t <= tsteps; t++) {
+    for (int i = 1; i < n; i++) {
+      unew(i) = alpha * u(i-1) + (1 - 2*alpha) * u(i) + alpha * u(i+1);
     }
+    u = unew;
+  }
+  string fwdfile = "../../data/fwd" + to_string(n) + ".txt";
+  writeToFile(unew, fwdfile);
 }
 
 
 void bwdEuler(int n, int tsteps, double alpha)
 {
   double a, b, c;
-  vec u = zeros(n+1);
-  vec y = zeros(n+1);
-  y(n) = u(n) = 1;
-  y(0) = u(0) = 0;
-  a = c = - alpha;
+  vec v = zeros(n+1);
+  vec v_prev = zeros(n+1);
+  v_prev(n) = v(n) = 1;
+  v_prev(0) = v(0) = 0;
+  a = c = -alpha;
   b = 1 + 2*alpha;
   for (int t = 1; t <= tsteps; t++) {
-    tridiag(n, y, a, b, c, u);
-    u(0) = 0;
-    u(n) = 1;
-    for (int i = 0; i <= n; i++) {
-      y(i) = u(i);
-    }
+    v_prev = v;
+    v_prev(n-1) += alpha;
+    trisolver(a, b, c, n, v_prev, v);
   }
   string bwdfile = "../../data/bwd" + to_string(n) + ".txt";
-  writeToFile(u, bwdfile);
+  writeToFile(v, bwdfile);
 }
 
 
-void crankNicolson(){
+void crankNic()
+{
   //TODO construct Crank-Nicolson
   //My estimate is that it has to test the theta factor
   //and then call either bwdEuler or fwdEuler.
@@ -87,13 +85,13 @@ void crankNicolson(){
 int main(int argc, char *argv[]) //n,tmax,tsteps
 {
 
-int n, t_max, tsteps;
-double dx, dt;
+int n, tsteps;
+double dx, dt, t_max;
 
 
 if (argc == 4){
   n = atoi(argv[1]);
-  t_max = atoi(argv[2]);
+  t_max = atof(argv[2]);
   tsteps = atof(argv[3]);
 } else {
   cout << "Bad usage" << endl;
@@ -101,11 +99,12 @@ if (argc == 4){
 }
 
 dx = 1.0/n;
-dt = ((double) t_max)/((double) tsteps);
+dt = t_max/tsteps;
+cout << dt << endl;
 double alpha = dt/(dx*dx);
 
 bwdEuler(n, tsteps, alpha);
-//fwdEuler(n, tsteps, alpha);
-
+fwdEuler(n, tsteps, alpha);
+//crankNic(n, tsteps, alpha);
 
 }
