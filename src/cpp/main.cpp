@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 #include "iostream"
 #include "fstream"
 #include <armadillo>
+=======
+>>>>>>> 83e5cb9b54a028660a5c7e614766f64b55fe0e92
 #include <iostream>
 #include <fstream>
 #include "armadillo"
@@ -12,11 +15,8 @@ using namespace std;
 void writeToFile(vec& u, int n, string filename)
 {
   ofstream outfile(filename);
-  //for (int i = 1; i < n; i++){
   outfile << u << endl;
-
   outfile.close();
-  //}
 }
 
 
@@ -91,6 +91,10 @@ int main(int argc, char *argv[]) //n,tmax,dx
 int n, t_max, tsteps;
 double dx, dt;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 83e5cb9b54a028660a5c7e614766f64b55fe0e92
 if (argc == 4){
   n = atoi(argv[1]);
   t_max = atoi(argv[2]);
@@ -101,11 +105,17 @@ else {
   exit(1);
 }
 
+<<<<<<< HEAD
 dt = (dx*dx)/4;
+=======
+>>>>>>> 83e5cb9b54a028660a5c7e614766f64b55fe0e92
 
-//dx = 0.01;
 dt = (dx*dx)/4;
+<<<<<<< HEAD
 //t_max = 10;
+=======
+dt = (dx*dx)/4;
+>>>>>>> 83e5cb9b54a028660a5c7e614766f64b55fe0e92
 tsteps = t_max/dt;
 double alpha = dt/(dx*dx);
 
