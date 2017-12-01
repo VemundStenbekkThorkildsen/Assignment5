@@ -5,9 +5,6 @@ CONFIG -= qt
 
 SOURCES += main.cpp
 
-LIBS += -LC:\Armadillo\newblas -llibblas
-LIBS += -LC:\Armadillo\newblas -lliblapack
-
-
-INCLUDEPATH += C:\Armadillo\include
-DEPENDPATH += C:\Armadillo\include
+INCLUDEPATH += C:/Qt/armadillo-8.100.1/include
+DEPENDPATH += C:/Qt/armadillo-8.100.1/include
+LIBS += -LC:/Qt/armadillo-8.100.1/examples/lib_win64 -llapack_win64_MT -lblas_win64_MT
