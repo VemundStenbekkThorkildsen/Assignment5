@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 #include "iostream"
 #include "fstream"
 #include <armadillo>
-=======
 #include <iostream>
 #include <fstream>
 #include "armadillo"
->>>>>>> bb1d8fe993e3b641db633a97ad2736fc1b18f414
 
 using namespace arma;
 using namespace std;
@@ -41,6 +38,24 @@ void tridiag(int n, vec& y, double a, double b, double c, vec& u)
     }
 }
 
+void fwdEuler(int n, int tsteps, double alpha){
+
+    vec y = zeros(n+1);
+    vec u = zeros(n+1);
+    double a = alpha;
+    double b = 1 - 2*alpha;
+    double c = alpha;
+    for(int t = 1; t <= tsteps; t++){
+        u(0) = u(n) = 0;
+        tridiag(n,y,a,b,c,u);
+        for(int i = 0; i<=n;i++){
+            y(i) = u(i);
+        }
+    }
+
+
+
+}
 
 void bwdEuler(int n, int tsteps, double alpha)
 {
@@ -76,32 +91,25 @@ int main(int argc, char *argv[]) //n,tmax,dx
 int n, t_max, tsteps;
 double dx, dt;
 
-<<<<<<< HEAD
-if (argc > 3){
-=======
-
 if (argc == 4){
->>>>>>> bb1d8fe993e3b641db633a97ad2736fc1b18f414
   n = atoi(argv[1]);
   t_max = atoi(argv[2]);
   dx = atof(argv[3]);
-} else {
+}
+else {
   cout << "Bad usage" << endl;
   exit(1);
 }
 
-<<<<<<< HEAD
 dt = (dx*dx)/4;
-=======
 
 //dx = 0.01;
 dt = (dx*dx)/4;
 //t_max = 10;
->>>>>>> bb1d8fe993e3b641db633a97ad2736fc1b18f414
 tsteps = t_max/dt;
 double alpha = dt/(dx*dx);
 
-bwdEuler(n, tsteps, alpha);
-
+//bwdEuler(n, tsteps, alpha);
+fwdEuler(n,tsteps,alpha);
 
 }
