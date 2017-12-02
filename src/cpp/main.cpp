@@ -87,11 +87,10 @@ void crankNic(int n, int tsteps, double alpha)
     for (int i = 1; i < n; i++) {
       y(i) = alpha*u(i-1) + (2 - 2*alpha)*u(i) + alpha*u(i+1);
     }
-    y(0) = 0;
-    y(n) = 1;
+    u = y;
     trisolver(a, b, c, n, y, u);
-    u(0) = 0;
-    u(n) = 1;
+    y = u;
+    y(n-1) += alpha;
   }
   string crankfile = "../../data/crank" + to_string(n) + ".txt";
   writeToFile(u, crankfile);
@@ -119,8 +118,8 @@ dt = t_max/tsteps;
 cout << dt << endl;
 double alpha = dt/(dx*dx);
 
-bwdEuler(n, tsteps, alpha);
-fwdEuler(n, tsteps, alpha);
+//bwdEuler(n, tsteps, alpha);
+//fwdEuler(n, tsteps, alpha);
 crankNic(n, tsteps, alpha);
 
 }
