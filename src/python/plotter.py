@@ -5,22 +5,26 @@ def filereader(filename):
     data = np.loadtxt(filename)
     return data
 
-def plotter(x, u, n):
+def plotter(x, fwd, bwd, n):
     plt.figure()
-    plt.plot(x, u)
+    plt.plot(x[1:-1], fwd[1:-1], label="Forward Euler")
+    plt.plot(x[1:-1], bwd[1:-1], label="Backward Euler")
     plt.xlabel("x")
     plt.ylabel("u")
     plt.title("U(x, t) plotted versus x")
-    plt.savefig("../../plots/bwd" + str(n) + ".pdf")
+    plt.legend()
+    plt.savefig("../../plots/bfwd" + str(n) + ".pdf")
 
 
 def main():
-    n = 10
+    n = 100
     path = "../../data/"
     bwd = path + "bwd" + str(n) + ".txt"
-    data = filereader(bwd)
-    x = np.linspace(0, 1, len(data)-2)
-    plotter(x, data[1:-1], n)
+    fwd = path + "fwd" + str(n) + ".txt"
+    db = filereader(bwd)
+    df = filereader(fwd)
+    x = np.linspace(0, 1, len(df))
+    plotter(x, df, db, n)
 
 
 if __name__ == '__main__':
