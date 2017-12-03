@@ -76,7 +76,7 @@ void bwdEuler(int n, int tsteps, double alpha)
 
 
 void crankNic(int n, int tsteps, double alpha_old)
-{ //fungerer ikke
+{
   double a, b, c;
   vec y = zeros(n+1); // This is u in Au=y
   vec u = zeros(n+1); // This is y in Au=y
@@ -95,6 +95,7 @@ void crankNic(int n, int tsteps, double alpha_old)
     y(0) = u(0) = 0;
     y(n-1) += alpha;
 
+    //meme
 
     trisolver(a, b, c, n, y, u);
     }
