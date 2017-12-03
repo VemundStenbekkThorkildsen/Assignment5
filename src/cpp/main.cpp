@@ -64,6 +64,7 @@ void bwdEuler(int n, int tsteps, double alpha)
   v_prev(0) = v(0) = 0;
   a = c = -alpha;
   b = 1 + 2*alpha;
+
   for (int t = 1; t <= tsteps; t++) {
     v_prev = v;
     v_prev(n-1) += alpha;
@@ -74,23 +75,26 @@ void bwdEuler(int n, int tsteps, double alpha)
 }
 
 
-void crankNic(int n, int tsteps, double alpha)
+void crankNic(int n, int tsteps, double alpha_old)
 { //fungerer ikke
   double a, b, c;
   vec u = zeros(n+1); // This is u in Au=y
   vec y = zeros(n+1); // This is y in Au=y
   u(n) = y(n) = 1;
 
-  a = c = - alpha;
-  b = 2 + 2*alpha;
+  double alpha = 0.5*alpha_old;
+  a = c = -alpha;
+  b = (2+2*alpha);
   for (int t = 1; t <= tsteps; t++) {
     for (int i = 1; i < n; i++) {
-      y(i) = alpha*u(i-1) + (2 - 2*alpha)*u(i) + alpha*u(i+1);
+      y(i) = (alpha)*u(i-1) + (2 - 2*alpha)*u(i) + (alpha)*u(i+1);
     }
-    u = y;
-    trisolver(a, b, c, n, y, u);
-    y = u;
+
     y(n-1) += alpha;
+
+
+    trisolver(a, b, c, n, y, u);
+
   }
   string crankfile = "../../data/crank" + to_string(n) + ".txt";
   writeToFile(u, crankfile);
@@ -118,8 +122,8 @@ dt = t_max/tsteps;
 cout << dt << endl;
 double alpha = dt/(dx*dx);
 
-//bwdEuler(n, tsteps, alpha);
-//fwdEuler(n, tsteps, alpha);
+bwdEuler(n, tsteps, alpha);
+fwdEuler(n, tsteps, alpha);
 crankNic(n, tsteps, alpha);
 
 }
