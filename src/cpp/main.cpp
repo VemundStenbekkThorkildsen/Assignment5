@@ -78,15 +78,17 @@ void bwdEuler(int n, int tsteps, double alpha)
 void crankNic(int n, int tsteps, double alpha_old)
 { //fungerer ikke
   double a, b, c;
-  vec u = zeros(n+1); // This is u in Au=y
-  vec y = zeros(n+1); // This is y in Au=y
-  u(n) = y(n) = 1;
+  vec v = zeros(n+1); // This is u in Au=y
+  vec v_prev = zeros(n+1); // This is y in Au=y
+  v(n) = v_prev(n) = 1;
+  alpha = alpha*0.5;
 
   double alpha = 0.5*alpha_old;
   a = c = -alpha;
   b = (2+2*alpha);
   for (int t = 1; t <= tsteps; t++) {
     for (int i = 1; i < n; i++) {
+<<<<<<< HEAD
       y(i) = (alpha)*u(i-1) + (2 - 2*alpha)*u(i) + (alpha)*u(i+1);
     }
 
@@ -95,9 +97,14 @@ void crankNic(int n, int tsteps, double alpha_old)
 
     trisolver(a, b, c, n, y, u);
 
+=======
+      v_prev(i) = alpha*v(i-1) + (2 - 2*alpha)*v(i) + alpha*v(i+1);
+    }
+    trisolver(a, b, c, n, v_prev, v);
+>>>>>>> cb2b53f2ffac0d9948183895f232d1106ad29ae9
   }
   string crankfile = "../../data/crank" + to_string(n) + ".txt";
-  writeToFile(u, crankfile);
+  writeToFile(v, crankfile);
 }
 
 
