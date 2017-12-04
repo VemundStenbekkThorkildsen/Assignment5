@@ -2,11 +2,10 @@ home
 close all
 clear all
 
-addpath('..\data')
+addpath('..\..\data')
 
 %Loading variables
-x = load('');
-y = load('');
+x = load('2fwd10.txt');
 
 %%
 
@@ -16,6 +15,8 @@ dy = dx;
 
 %Plotting the data
 figure(1)
-hold on
-
-
+mesh(x)
+xlabel('x')
+ylabel('y')
+zlabel('t')
+title('u(x) over t')

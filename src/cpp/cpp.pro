@@ -8,7 +8,9 @@ SOURCES += main.cpp \
     bwdeuler.cpp \
     fwdeuler.cpp \
     trisolver.cpp \
-    writetofile.cpp
+    writetofile.cpp \
+    writematfile.cpp \
+    fwdeuler2.cpp
 
 INCLUDEPATH += C:/Qt/armadillo-8.100.1/include
 DEPENDPATH += C:/Qt/armadillo-8.100.1/include
