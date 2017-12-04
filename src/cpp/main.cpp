@@ -36,6 +36,8 @@ bwdEuler(n, tsteps, alpha);
 fwdEuler(n, tsteps, alpha);
 crankNic(n, tsteps, alpha);
 fwd2Euler(n, tsteps, dt, dx);
+bwd2Euler(n, tsteps, dt, dx);
+
 
 finish = clock();
 double time = (double (finish)- double (start))/(CLOCKS_PER_SEC);

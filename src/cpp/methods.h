@@ -12,3 +12,4 @@ void fwdEuler(int n, int tsteps, double alpha);
 void bwdEuler(int n, int tsteps, double alpha);
 void crankNic(int n, int tsteps, double alpha_old);
 void fwd2Euler(int n, int tsteps, double dt, double dx);
+void bwd2Euler(int n, int tsteps, double dt, double dx);

@@ -7,6 +7,8 @@ addpath('..\..\data')
 %Loading variables
 x = load('2fwd10.txt');
 
+backward = load('2bwd10.txt');
+
 %%
 
 %Arrays for x-axis
@@ -16,6 +18,13 @@ dy = dx;
 %Plotting the data
 figure(1)
 mesh(x)
+xlabel('x')
+ylabel('y')
+zlabel('t')
+title('u(x) over t')
+
+figure(2)
+mesh(backward)
 xlabel('x')
 ylabel('y')
 zlabel('t')
