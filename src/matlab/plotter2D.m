@@ -2,29 +2,17 @@ home
 close all
 clear all
 
+%Accessing the 'data' folder on github
 addpath('..\..\data')
 
-%Loading variables
-x = load('2fwd10.txt');
-
-backward = load('2bwd10.txt');
+%Loading the forward euler matrix for 2D
+forward = load('2fwd10.txt');
 
 %%
 
-%Arrays for x-axis
-dx = linspace(0,1,length(x));
-dy = dx;
-
 %Plotting the data
 figure(1)
-mesh(x)
-xlabel('x')
-ylabel('y')
-zlabel('t')
-title('u(x) over t')
-
-figure(2)
-mesh(backward)
+mesh(forward)
 xlabel('x')
 ylabel('y')
 zlabel('t')
