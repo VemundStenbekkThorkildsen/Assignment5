@@ -30,16 +30,16 @@ void geoeulerforward(int n, int tsteps, double dt, double dx, double ro, double 
 
 
           if(j == 0){
-              u(i,j) = 0;
+              u(i,j) = 8;
           }
           else if(j == n){
-              u(i,j) = 1;
+              u(i,j) = 1300;
           }
           else if(i == 0){
-              u(i,j) = (k*(u0(i,j) + alpha*(u0(i+1,j) + u0(n,j) + u0(i,j+1) + u0(i,j-1) - 4*u0(i,j)))+Q)/(ro*c);
+              u(i,j) = 0;//(k*(u0(i,j) + alpha*(u0(i+1,j) + u0(n,j) + u0(i,j+1) + u0(i,j-1) - 4*u0(i,j)))+Q)/(ro*c);
           }
           else if(i == n){
-              u(i,j) = (k*(u0(i,j) + alpha*(u0(0,j) + u0(i-1,j) + u0(i,j+1) + u0(i,j-1) - 4*u0(i,j)))+Q)/(ro*c);
+              u(i,j) = 0;//(k*(u0(i,j) + alpha*(u0(0,j) + u0(i-1,j) + u0(i,j+1) + u0(i,j-1) - 4*u0(i,j)))+Q)/(ro*c);
           }
           else{
               u(i,j) = (k*(u0(i,j) + alpha*(u0(i+1,j) + u0(i-1,j) + u0(i,j+1) + u0(i,j-1) - 4*u0(i,j)))+Q)/(ro*c);

@@ -218,15 +218,23 @@ Crank-Nicolson & $\Delta x^2$, $\Delta t^2$ & $\Delta x^2$ and $\Delta t^2$\\
 \caption{Truncation errors and stability for the three methods}
 \label{truncstab}
 \end{table}
+ 
 
+<<<<<<< HEAD
 \noindent Figure \ref{truncstab} shows that, even though the Euler forward method is easy to implement, there are serious limitations for the stability. The Euler backward and Crank-nicolson schemes are stable for all $\Delta x^2$ and $\Delta t^2$, but the implementation is more complicated. As the euler forward and Crank-nicolson uses a tridiagonal solver in the computation process, it is expected to be slower than the Euler forward scheme, which uses a more direct approach  
 
+=======
+>>>>>>> 3d4e5d045b1a851e5bf207d02cd2359f8cf5eac9
 \begin{figure}[H]
  	\centering
   	\subfigure[\ $t_1$]{\includegraphics[width = 0.49\textwidth]{../plots/t2.pdf}}  
   	\subfigure[\ $t_2$]{\includegraphics[width = 0.49\textwidth]{../plots/t1.pdf}}
   	\caption{\label{fig:5c}Comparison of $t_1$ and $t_2$.}
 \end{figure}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3d4e5d045b1a851e5bf207d02cd2359f8cf5eac9
 
 \noindent Figure \ref{fig:5c} highlights the distribution of temperature at two different times. At $t_1$ the different schemes produce different distributions. Forward and backward euler line up closely, in contrast to the Crank-nicolson scheme. At $t_2$ the temperature distribution is linear and all the schemes line up closely. 
 

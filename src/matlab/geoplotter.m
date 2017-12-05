@@ -6,7 +6,7 @@ clear all
 addpath('..\..\data')
 
 %Loading stable solutions
-forward = load('2fwd120.txt');
+forward = load('fwdgeo120.txt');
 
 
 %%
