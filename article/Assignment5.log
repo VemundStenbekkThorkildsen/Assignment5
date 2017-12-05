@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.21)  5 DEC 2017 21:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.21)  5 DEC 2017 21:58
 entering extended mode
 **./Assignment5.tex
 (Assignment5.tex
@@ -875,47 +875,47 @@ Underfull \hbox (badness 10000) in paragraph at lines 163--164
 [4] <../plots/t2.pdf, id=51, 462.52798pt x 346.89601pt>
 File: ../plots/t2.pdf Graphic file (type pdf)
  <use ../plots/t2.pdf>
-Package pdftex.def Info: ../plots/t2.pdf used on input line 226.
+Package pdftex.def Info: ../plots/t2.pdf used on input line 228.
 (pdftex.def)             Requested size: 204.2504pt x 153.19049pt.
 
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <8> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 226.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 228.
 
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <6> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 226.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 228.
 
 <../plots/t1.pdf, id=52, 462.52798pt x 346.89601pt>
 File: ../plots/t1.pdf Graphic file (type pdf)
  <use ../plots/t1.pdf>
-Package pdftex.def Info: ../plots/t1.pdf used on input line 227.
+Package pdftex.def Info: ../plots/t1.pdf used on input line 229.
 (pdftex.def)             Requested size: 204.2504pt x 153.19049pt.
 
 <../plots/unstable.pdf, id=54, 462.52798pt x 346.89601pt>
 File: ../plots/unstable.pdf Graphic file (type pdf)
 
 <use ../plots/unstable.pdf>
-Package pdftex.def Info: ../plots/unstable.pdf used on input line 235.
+Package pdftex.def Info: ../plots/unstable.pdf used on input line 237.
 (pdftex.def)             Requested size: 200.078pt x 150.05692pt.
  [5pdfTeX warning (ext4): destination with the same identifier (name{table.1}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.240 
+l.242 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.240 
+l.242 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.240 
+l.242 
        <../plots/t2.pdf> <../plots/t1.pdf
 
 pdfTeX warning: pdflatex (file ../plots/t1.pdf): PDF inclusion: multiple pdfs w
@@ -925,20 +925,25 @@ ith page group included in a single page
 pdfTeX warning: pdflatex (file ../plots/unstable.pdf): PDF inclusion: multiple 
 pdfs with page group included in a single page
 >] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 246--248
+Underfull \hbox (badness 10000) in paragraph at lines 248--250
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 251--253
 
  []
 
 [7] [8]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 272.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 274.
  [9]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 272.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 274.
  (Assignment5.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 272.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 272.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 274.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 274.
 Package rerunfilecheck Info: File `Assignment5.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 272.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 274.
  ) 
 Here is how much of TeX's memory you used:
  9647 strings out of 493323
@@ -959,7 +964,7 @@ msfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Progra
 m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/
 MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on Assignment5.pdf (9 pages, 349048 bytes).
+Output written on Assignment5.pdf (9 pages, 349049 bytes).
 PDF statistics:
  304 PDF objects out of 1000 (max. 8388607)
  38 named destinations out of 1000 (max. 500000)
