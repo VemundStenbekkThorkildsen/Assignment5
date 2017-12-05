@@ -31,15 +31,6 @@ void fwd2Euler(int n, int tsteps, double dt, double dx){
           else{
               u(i,j) = u0(i,j) + alpha*(u0(i+1,j) + u0(i-1,j) + u0(i,j+1) + u0(i,j-1) - 4*u0(i,j));
           }
-        /*
-        if(j==0 && i != 0 && i != n){
-            u(i,j) = u0(i,j) + alpha*(u0(i+1,j) + u0(i-1,j) + u0(i,j+1) - 4*u0(i,j));
-        } else if(j==n && i != 0 && i != n){
-            u(i,j) = u0(i,j) + alpha*(u0(i+1,j) + u0(i-1,j) + u0(i,j-1) - 4*u0(i,j));
-        }else if(j != n && j!= 0 && i != n && i != 0){
-            u(i,j) = u0(i,j) + alpha*(u0(i+1,j) + u0(i-1,j) + u0(i,j+1) + u0(i,j-1) - 4*u0(i,j));
-        }
-        */
       }
     }
     u0 = u;
