@@ -8,7 +8,7 @@
 \usepackage{listings}
 \usepackage{refstyle}
 \usepackage{wasysym}
-
+\usepackage{subfigure}
 
 \lstset{numbers=left,
 	title=\lstname,
@@ -37,8 +37,18 @@
 
 \usepackage{bm}
 \usepackage{hyperref}
+\usepackage{xcolor}
+%Denne seksjonen under sørger for at linken blir blå og ikke rød.
+\hypersetup{                
+    colorlinks,
+    linkcolor={black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+\urlstyle{same}
+
 \usepackage[margin=1.25 in]{geometry}
-\usepackage[usenames, dvipsnames]{color}
+%\usepackage[usenames, dvipsnames]{color}
 \usepackage{float}
 \usepackage{commath}
 
@@ -58,18 +68,13 @@ Abstract
 }\\
 \end{center}
 
-
 \newpage
-{\LARGE\bf
-Introduction
-}\\
+\section*{Introduction}
 The aim of this project is to use three different finite difference schemes to simulate temperature variations in Earths crust and upper mantle. The three schemes are the implicit Euler backward, explicit Euler forward and the Crank-nicolson scheme. This is a combination of the Euler forward and backward schemes. In this report, there will be focus on testing the three algorithms in one dimension, before moving on to two dimensions. The first part will mostly revolve around idealized situations in one dimension, before moving on to an idealized two dimensional problem. This is followed by a three layered model of the earths crust, where each has different parameters. All the code, runs and figures for the project is accessible \href{https://github.com/VemundStenbekkThorkildsen/Assignment5}{\textcolor{blue}{here}}.  
 
 
 \newpage
-{\LARGE\bf
-Method
-}\\
+\section*{Method}
 
 \noindent The three different schemes are differential equations that can be rewritten as a set of linear equations. The Euler forward is explicit, the Euler backward is implicit, while the Crank-Nicolson scheme is a combination of the two preceding schemes. These systems can be rewritten as sets of linear equations. \\
 
@@ -191,9 +196,7 @@ B = \begin{bmatrix}
 
 
 \newpage
-{\LARGE\bf
-Results
-}\\
+\section*{Results}
 
 
 \noindent The truncation errors and stability is calculated in the Taylor expansion and these values are shown in the table below:
@@ -216,35 +219,39 @@ Crank-Nicolson & $\Delta x^2$, $\Delta t^2$ & $\Delta x^2$ and $\Delta t^2$\\
 \label{truncstab}
 \end{table}
 
+<<<<<<< HEAD
 ref{truncstab} shows that, even though the Euler forward method is easy to implement, there are serious limitations for the stability. The Euler backward and Crank-nicolson schemes are stable for all $\Delta x^2$ and $\Delta t^2$, but the implementation is more complicated. As the euler forward and Crank-nicolson uses a tridiagonal solver in the computation process, it is expected to be slower than the Euler forward scheme, which uses a more direct approach  
+=======
+\begin{figure}[H]
+ 	\centering
+  	\subfigure[\ $t_1$]{\includegraphics[width = 0.49\textwidth]{../plots/t1.pdf}}  
+  	\subfigure[\ $t_2$]{\includegraphics[width = 0.49\textwidth]{../plots/t2.pdf}}
+  	\caption{\label{fig:5c}Comparison of $t_1$ and $t_2$.}
+\end{figure}
+>>>>>>> 4ca6165e71dc0e98f751f34e8f9b3b619e007f9f
 
 
 
 
 \newpage
-{\LARGE\bf
-Discussion
-}\\
+\section*{Discussion}
 
-From Table \ref{truncstab}
+From Table \ref{truncstab} shows that, even though the Euler forward method is easy to implement, there are serious limitations for the stability. The Euler backward and Crank-nicolson schemes are stable for all $\Delta x^2$ and $\Delta t^2$, but the implementation is more complicated. As the euler forward and Crank-nicolson uses a tridiagonal solver in the computation process, it is expected to be slower than the Euler forward scheme, which uses a more direct approach
+\\
+\\
+From figure \ref{fig:5c}
+
+
+
+\newpage
+\section*{Concluding remarks}
 
 
 
 
 
 \newpage
-{\LARGE\bf
-Concluding remarks
-}\\
-
-
-
-
-
-\newpage
-{\LARGE\bf
-Reference list
-}\\
+\section*{References}
 
 
 \end{document}
