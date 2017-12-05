@@ -12,8 +12,9 @@ forward = load('2fwd10.txt');
 
 %Plotting the data
 figure(1)
-mesh(forward)
-xlabel('x')
+graph = mesh(forward);
+set(graph,'LineWidth',2); %Thicker lines
+xlabel('x') %Labels
 ylabel('y')
 zlabel('t')
-title('u(x) over t')
+title('u(x) over t') %Title
