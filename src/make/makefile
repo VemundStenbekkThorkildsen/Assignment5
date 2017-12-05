@@ -7,21 +7,21 @@ FLAGS = -O3
 
 $(PROG) : $(OBJS)
 	$(CC) $(FLAGS) -o $(PROG) $(OBJS)
-main.o: ../cpp/main.cpp
+main.o : ../cpp/main.cpp
 	$(CC) $(FLAGS) -c ../cpp/main.cpp
-bwdeuler.o : ../methods.h ../bwdeuler.cpp 
-	$(CC) $(FLAGS) -c ../bwdeuler.cpp
-cranknic.o : ../methods.h ../cranknic.cpp 
-	$(CC) $(FLAGS) -c ../cranknic.cpp
-fwdeuler.o : ../methods.h ../fwdeuler.cpp 
-	$(CC) $(FLAGS) -c ../fwdeuler.cpp
-fwdeuler2.o : ../methods.h ../fwdeuler2.cpp 
-	$(CC) $(FLAGS) -c ../fwdeuler2.cpp
-trisolver.o : ../methods.h ../trisolver.cpp 
-	$(CC) $(FLAGS) -c ../trisolver.cpp
-writetofile.o : ../methods.h ../writetofile.cpp 
-	$(CC) $(FLAGS) -c ../writetofile.cpp
-writematfile.o : ../methods.h ../writematfile.cpp 
-	$(CC) $(FLAGS) -c ../writematfile.cpp
+bwdeuler.o : ../cpp/methods.h ../cpp/bwdeuler.cpp
+	$(CC) $(FLAGS) -c ../cpp/bwdeuler.cpp
+cranknic.o : ../cpp/methods.h ../cpp/cranknic.cpp
+	$(CC) $(FLAGS) -c ../cpp/cranknic.cpp
+fwdeuler.o : ../cpp/methods.h ../cpp/fwdeuler.cpp
+	$(CC) $(FLAGS) -c ../cpp/fwdeuler.cpp
+fwdeuler2.o : ../cpp/methods.h ../cpp/fwdeuler2.cpp
+	$(CC) $(FLAGS) -c ../cpp/fwdeuler2.cpp
+trisolver.o : ../cpp/methods.h ../cpp/trisolver.cpp
+	$(CC) $(FLAGS) -c ../cpp/trisolver.cpp
+writetofile.o : ../cpp/methods.h ../cpp/writetofile.cpp
+	$(CC) $(FLAGS) -c ../cpp/writetofile.cpp
+writematfile.o : ../cpp/methods.h ../cpp/writematfile.cpp
+	$(CC) $(FLAGS) -c ../cpp/writematfile.cpp
 clean:
 	rm -f core $(PROG) $(OBJS)
