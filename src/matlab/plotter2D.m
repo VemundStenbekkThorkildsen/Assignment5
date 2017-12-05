@@ -18,3 +18,6 @@ xlabel('x') %Labels
 ylabel('y')
 zlabel('t')
 title('u(x) over t') %Title
+
+figure(2)
+surf(forward)
