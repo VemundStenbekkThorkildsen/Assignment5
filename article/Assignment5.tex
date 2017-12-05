@@ -219,27 +219,42 @@ Crank-Nicolson & $\Delta x^2$, $\Delta t^2$ & $\Delta x^2$ and $\Delta t^2$\\
 \label{truncstab}
 \end{table}
 
-<<<<<<< HEAD
-ref{truncstab} shows that, even though the Euler forward method is easy to implement, there are serious limitations for the stability. The Euler backward and Crank-nicolson schemes are stable for all $\Delta x^2$ and $\Delta t^2$, but the implementation is more complicated. As the euler forward and Crank-nicolson uses a tridiagonal solver in the computation process, it is expected to be slower than the Euler forward scheme, which uses a more direct approach  
-=======
+\noindent Figure \ref{truncstab} shows that, even though the Euler forward method is easy to implement, there are serious limitations for the stability. The Euler backward and Crank-nicolson schemes are stable for all $\Delta x^2$ and $\Delta t^2$, but the implementation is more complicated. As the euler forward and Crank-nicolson uses a tridiagonal solver in the computation process, it is expected to be slower than the Euler forward scheme, which uses a more direct approach  
+
 \begin{figure}[H]
  	\centering
-  	\subfigure[\ $t_1$]{\includegraphics[width = 0.49\textwidth]{../plots/t1.pdf}}  
-  	\subfigure[\ $t_2$]{\includegraphics[width = 0.49\textwidth]{../plots/t2.pdf}}
+  	\subfigure[\ $t_1$]{\includegraphics[width = 0.49\textwidth]{../plots/t2.pdf}}  
+  	\subfigure[\ $t_2$]{\includegraphics[width = 0.49\textwidth]{../plots/t1.pdf}}
   	\caption{\label{fig:5c}Comparison of $t_1$ and $t_2$.}
 \end{figure}
->>>>>>> 4ca6165e71dc0e98f751f34e8f9b3b619e007f9f
 
+\noindent Figure \ref{fig:5c} highlights the distribution of temperature at two different times. At $t_1$ the different schemes produce different distributions. Forward and backward euler line up closely, in contrast to the Crank-nicolson scheme. At $t_2$ the temperature distribution is linear and all the schemes line up closely. 
+
+\begin{figure} [H]
+	\centering
+	\includegraphics[width=0.48\textwidth]{../plots/unstable.pdf}
+	\caption{\label{fig:unstable} Plot showing the effect of choosing unfavorable $\Delta x$ and $\Delta t$}
+\end{figure}
+
+\noindent As can be read out of Table \ref{truncstab}, the forward Euler scheme has a rigorous stability condition. Figure \ref{fig:unstable} shows a graphical representation of what happens when this condition is violated. 
 
 
 
 \newpage
 \section*{Discussion}
 
-From Table \ref{truncstab} shows that, even though the Euler forward method is easy to implement, there are serious limitations for the stability. The Euler backward and Crank-nicolson schemes are stable for all $\Delta x^2$ and $\Delta t^2$, but the implementation is more complicated. As the euler forward and Crank-nicolson uses a tridiagonal solver in the computation process, it is expected to be slower than the Euler forward scheme, which uses a more direct approach
+Table \ref{truncstab} shows that, even though the Euler forward method is easy to implement, there are serious limitations for the stability. The Euler backward and Crank-nicolson schemes are stable for all $\Delta x^2$ and $\Delta t^2$, but the implementation is more complicated. As the euler forward and Crank-nicolson uses a tridiagonal solver in the computation process, it is expected to be slower than the Euler forward scheme, which uses a more direct approach. Figure \ref{fig:unstable} shows that the forward Euler fluctuates a lot when the stability condition is violated. The stable schemes actually produce correct results, but are drowned by the fluctuations of the forward Euler. 
 \\
-\\
-From figure \ref{fig:5c}
+
+\noindent In the one dimensional case, the system converges to an equilibrium. This is shown graphical in figure \ref{fig:5c}A and \ref{fig:5c}B. Given the boundary conditions $u(0,t)=0$ and $u(1,t)=1$ for all $t$, this can be translated to a one dimensional rod with  a heat source at $x=1$ and a heat sink at $x=0$. When starting the computation, the only point with a nonzero temperature is at $x=1$. The heat from this point then spreads through the rod. The heat rises quicker close to the heat source, as is shown in figure \ref{fig:5c}A, but will with time reach an equilibrium (figure \ref{fig:5c}B). It is important to note that the behavior of the system is entirely dependent on the boundary conditions. As an example, it would be possible to add another heat source at $x=0$ and the temperature would rise fast in the edges and slower in the middle. 
+
+
+\noindent The boundary conditions in the two dimensional case is depending on what kind of system being simulated. If the system in question is a two dimensional rod with a heat source at one end and heat loss at all the other edges, the temperature distribution would look like $enfigurejegikkehar$. If the system is the temperature distribution in the lithosphere, it is not expected to be much heat loss in the lateral direction. 
+
+
+
+
+
 
 
 
