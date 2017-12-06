@@ -18,12 +18,8 @@ dy = dx;
 
 %Plotting the data
 figure(1)
-map = contourf(X,Y,forward,'ShowText','on'); %Crank-Nicolson
+contourf(X,Y,forward,'ShowText','on'); %Crank-Nicolson
 colorbar
 title('Contour') %Title
 xlabel('x') %Labels and legend
 ylabel('z')
-
-figure(2)
-surf(forward)
-colormap(parula(20));

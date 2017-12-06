@@ -32,8 +32,8 @@ dx = 1.0/n;
 dt = t_max/tsteps;
 double alpha = dt/(dx*dx);
 
-double ro = (3.510*3.510*3.510)*1000; //kg/km^3
-double k = 2.5e3; //W/km/C
+double ro = 3.5*1e12; //kg/km^3
+double k = (3600*24*365)*2.5*1e3; //J/year*km/C
 double c = 1000; //J/kg/C^-1
 
 //bwdEuler(n, tsteps, alpha);
