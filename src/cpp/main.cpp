@@ -37,10 +37,10 @@ double k = (3600*24*365)*2.5*1e3; //J/year*km/C
 double c = 1000; //J/kg/C^-1
 
 //bwdEuler(n, tsteps, alpha);
-//fwdEuler(n, tsteps, alpha, ro, k, c);
+//fwdEuler(n, tsteps, alpha);
 //crankNic(n, tsteps, alpha);
-//fwd2Euler(n, tsteps, dt, dx, ro, k, c);
-geoeulerforward(n, tsteps, dt, dx, ro, k, c);
+fwd2Euler(n, tsteps, dt, dx);
+//geoeulerforward(n, tsteps, dt, dx, ro, k, c);
 
 
 finish = clock();

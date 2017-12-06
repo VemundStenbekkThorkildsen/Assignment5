@@ -2,7 +2,7 @@
 
 PROG = diff
 CC = g++
-OBJS = main.o bwdeuler.o cranknic.o fwdeuler.o fwdeuler2.o trisolver.o writetofile.o writematfile.o
+OBJS = main.o bwdeuler.o cranknic.o fwdeuler.o fwdeuler2.o trisolver.o writetofile.o writematfile.o geoeulerforward.o
 FLAGS = -O3
 
 $(PROG) : $(OBJS)
@@ -23,5 +23,7 @@ writetofile.o : ../cpp/methods.h ../cpp/writetofile.cpp
 	$(CC) $(FLAGS) -c ../cpp/writetofile.cpp
 writematfile.o : ../cpp/methods.h ../cpp/writematfile.cpp
 	$(CC) $(FLAGS) -c ../cpp/writematfile.cpp
+geoeulerforward.o : ../cpp/methods.h ../cpp/geoeulerforward.cpp
+	$(CC) $(FLAGS) -c ../cpp/geoeulerforward.cpp
 clean:
 	rm -f core $(PROG) $(OBJS)
