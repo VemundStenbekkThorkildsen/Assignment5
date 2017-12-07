@@ -1,6 +1,10 @@
 #include "methods.h"
 
+<<<<<<< HEAD
 void geoeulerforward(int n, int tsteps, double dt, double dx, double ro, double k, double c){
+=======
+void geoeulerforward(int n, int tsteps, double dt, double dx, double rho, double k_old, double c_p){
+>>>>>>> d7cae897c66ba037b5f859c93e9764f6bceef857
 
   //Assuming dx = dy
   double alpha = dt/(dx*dx);
@@ -16,12 +20,16 @@ void geoeulerforward(int n, int tsteps, double dt, double dx, double ro, double 
   double Q;
 
   double per_year = 3600*24*365;
-
+  double per_10Ma = per_year*1e7;
+  double rho_c = rho*c_p;
+  int count = 1;
   for (int t = 1; t <= tsteps; t++) {
+    double divider = ((double) t / (double) tsteps);
+    //k = k_old*divider;
     for(int i=0; i <=n; i++){
       for(int j=0; j <=n; j++){
-          double divider = ((double) t / (double) tsteps);
           if(j<=20){
+<<<<<<< HEAD
               Q = (per_year*1.4*1e3)*1e4; //J/10000year*km^3
           }
           else if((j>20) && (j<=40)){
@@ -30,6 +38,19 @@ void geoeulerforward(int n, int tsteps, double dt, double dx, double ro, double 
           else if((j>40)){
               Q = (per_year*0.05*1e3)*1e4; //J/10000year*km^3
           }
+=======
+              Q = (per_10Ma*(1.4*1e-6)*1e9)*1e-12;//*10e-12; //TJ/10My*km^3
+          }
+          else if((j>20) && (j<=40)){
+              Q = (per_10Ma*(0.35*1e-6)*1e9)*1e-12;//*10e-12; //TJ/10My*km^3
+          }
+          else if((j>40)){
+              Q = (per_10Ma*(0.05*1e-6)*1e9)*1e-12;//*10e-12; //TJ/10My*km^3
+          }
+          //cout << Q << endl;
+          //Q = Q*divider;
+          //cout << Q << endl;
+>>>>>>> d7cae897c66ba037b5f859c93e9764f6bceef857
 
 
           if(j == 0){
@@ -39,19 +60,23 @@ void geoeulerforward(int n, int tsteps, double dt, double dx, double ro, double 
               u(i,j) = 8;
           }
           else if(i == 0){
-              u(i,j) = divider*(k*(u0(i,j) + alpha*(u0(i+1,j) + u0(n,j) + u0(i,j+1) + u0(i,j-1) - 4*u0(i,j)))+Q)/(ro*c);
+              u(i,j) = (k*(u0(i,j) + alpha*(u0(i+1,j) + u0(n,j) + u0(i,j+1) + u0(i,j-1) - 4*u0(i,j)))+Q)/(rho_c);
           }
           else if(i == n){
-              u(i,j) = divider*(k*(u0(i,j) + alpha*(u0(0,j) + u0(i-1,j) + u0(i,0) + u0(i,j-1) - 4*u0(i,j)))+Q)/(ro*c);
+              u(i,j) = (k*(u0(i,j) + alpha*(u0(0,j) + u0(i-1,j) + u0(i,0) + u0(i,j-1) - 4*u0(i,j)))+Q)/(rho_c);
           }
           else{
-              u(i,j) = divider*(k*(u0(i,j) + alpha*(u0(i+1,j) + u0(i-1,j) + u0(i,j+1) + u0(i,j-1) - 4*u0(i,j)))+Q)/(ro*c);
+              u(i,j) = (k*(u0(i,j) + alpha*(u0(i+1,j) + u0(i-1,j) + u0(i,j+1) + u0(i,j-1) - 4*u0(i,j)))+Q)/(rho_c);
           }
           //cout << u(i,j) << endl;
       }
     }
+    count += 1;
     u0 = u;
-    cout << ((double) t/tsteps)*100 << " % complete" << endl;
+    if(count == tsteps/100){
+      cout << ((t*100)/tsteps) << " % complete" << endl;
+      count = 0;
+    }
   }
   string fwdgeo = "../../data/fwdgeo" + to_string(n) + ".txt";
   writeMatFile(u0, fwdgeo);

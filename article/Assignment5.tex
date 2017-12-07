@@ -220,7 +220,7 @@ Crank-Nicolson & $\Delta x^2$, $\Delta t^2$ & $\Delta x^2$ and $\Delta t^2$\\
 \end{table}
  
 
-\noindent Figure \ref{truncstab} shows that, even though the Euler forward method is easy to implement, there are serious limitations for the stability. The Euler backward and Crank-nicolson schemes are stable for all $\Delta x^2$ and $\Delta t^2$, but the implementation is more complicated. As the euler forward and Crank-nicolson uses a tridiagonal solver in the computation process, it is expected to be slower than the Euler forward scheme, which uses a more direct approach  
+\noindent Table \ref{truncstab} shows that the Euler backward and Crank-nicolson schemes have no limitations for $\Delta x$ and $\Delta t$. 
 
 
 \begin{figure}[H]
@@ -240,21 +240,29 @@ Crank-Nicolson & $\Delta x^2$, $\Delta t^2$ & $\Delta x^2$ and $\Delta t^2$\\
 
 \noindent As can be read out of Table \ref{truncstab}, the forward Euler scheme has a rigorous stability condition. Figure \ref{fig:unstable} shows a graphical representation of what happens when this condition is violated. 
 
+\begin{figure} [H]
+	\centering
+	\subfigure[\ No periodic boundary conditions] {\includegraphics[width=0.48\textwidth]{../plots/bonded2D.pdf}}
+	\subfigure[\ Periodic boundary conditions]{\includegraphics[width=0.48\textwidth]{../plots/periodic2D.pdf}}
+	\caption{\label{fig:5d} Two dimensional simulation with and without periodic boundary conditions}
+\end{figure}
+
+\noindent With periodic boundary conditions, the plot is giving the same result as in the one dimensional case (Figure \ref{fig:5c}A and Figure \ref{fig:5d}A). In other words, it is showing a uniform increase in temperature with increasing $x$.   Without periodic boundary conditions, there is heat loss at ell the edges except the edge with the heat source. 
 
 
 \newpage
 \section*{Discussion}
 
-Table \ref{truncstab} shows that, even though the Euler forward method is easy to implement, there are serious limitations for the stability. The Euler backward and Crank-nicolson schemes are stable for all $\Delta x^2$ and $\Delta t^2$, but the implementation is more complicated. As the euler forward and Crank-nicolson uses a tridiagonal solver in the computation process, it is expected to be slower than the Euler forward scheme, which uses a more direct approach. Figure \ref{fig:unstable} shows that the forward Euler fluctuates a lot when the stability condition is violated. The stable schemes actually produce correct results, but are drowned by the fluctuations of the forward Euler. 
+Table \ref{truncstab} shows that, even though the Euler forward method is easy to implement, there are serious limitations for the stability. The Euler backward and Crank-nicolson schemes are stable for all $\Delta x$ and $\Delta t$, but the implementation is more complicated. As the euler forward and Crank-nicolson uses a tridiagonal solver in the computation process, it is expected to be slower than the Euler forward scheme, which uses a more direct approach. Figure \ref{fig:unstable} shows that the forward Euler fluctuates a lot when the stability condition is violated. The stable schemes actually produce correct results, but are drowned by the fluctuations of the forward Euler. 
 \\
 
 \noindent In the one dimensional case, the system converges to an equilibrium. This is shown graphical in figure \ref{fig:5c}A and \ref{fig:5c}B. Given the boundary conditions $u(0,t)=0$ and $u(1,t)=1$ for all $t$, this can be translated to a one dimensional rod with  a heat source at $x=1$ and a heat sink at $x=0$. When starting the computation, the only point with a nonzero temperature is at $x=1$. The heat from this point then spreads through the rod. The heat rises quicker close to the heat source, as is shown in figure \ref{fig:5c}A, but will with time reach an equilibrium (figure \ref{fig:5c}B). It is important to note that the behavior of the system is entirely dependent on the boundary conditions. As an example, it would be possible to add another heat source at $x=0$ and the temperature would rise fast in the edges and slower in the middle. 
 \\
 
-\noindent The boundary conditions in the two dimensional case is depending on what kind of system being simulated. If the system in question is a two dimensional rod with a heat source at one end and heat loss at all the other edges, the temperature distribution would look like $enfigurejegikkehar$. If the system is simulating the temperature distribution in the lithosphere, it is not expected to be much heat loss in the lateral direction. 
+\noindent The boundary conditions in the two dimensional case is depending on what kind of system being simulated. If the system in question is a two dimensional rod with a heat source at one end and heat loss at all the other edges, the temperature distribution would look like \ref{fig:5d}A. If the system is simulating the temperature distribution in the lithosphere, it is not expected to be much heat loss in the lateral direction. This can be simulated with periodic boundary conditions, which in essence removes all lateral heat loss. 
 \\
 
-\noindent The last case looked on is the three layered lithosphere model. The two bottom layers are enriched with a radioactive substance that alters the heat production in the layer. The enriched area is limited to 150 kilometers of lateral extension. As the area is limited, there will be heat flow in horizontal direction.  
+\noindent The last case looked on is the three layered lithosphere model. The two bottom layers are enriched with a radioactive substance that alters the heat production in the layer. The enriched area is limited to 150 kilometers of lateral extension. As the enriched area is limited, there will be heat flow in horizontal direction.  
 
 
 
