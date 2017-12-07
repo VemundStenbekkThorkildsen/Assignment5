@@ -1,6 +1,6 @@
 #include "methods.h"
 
-void geoeulerforward(int n, int tsteps, double dt, double dx, double ro, double k_old, double c){
+void geoeulerforward(int n, int tsteps, double dt, double dx, double ro, double k, double c){
 
   //Assuming dx = dy
   double alpha = dt/(dx*dx);
@@ -14,7 +14,6 @@ void geoeulerforward(int n, int tsteps, double dt, double dx, double ro, double 
   }
 
   double Q;
-  double k;
 
   double per_year = 3600*24*365;
 
@@ -23,15 +22,14 @@ void geoeulerforward(int n, int tsteps, double dt, double dx, double ro, double 
       for(int j=0; j <=n; j++){
           double divider = ((double) t / (double) tsteps);
           if(j<=20){
-              Q = (per_year*1.4*1e3); //J/year*km^3
+              Q = (per_year*1.4*1e3)*1e4; //J/10000year*km^3
           }
           else if((j>20) && (j<=40)){
-              Q = (per_year*0.35*1e3); //J/year*km^3
+              Q = (per_year*0.35*1e3)*1e4; //J/10000year*km^3
           }
           else if((j>40)){
-              Q = (per_year*0.05*1e3); //J/year*km^3
+              Q = (per_year*0.05*1e3)*1e4; //J/10000year*km^3
           }
-          //k = k_old*(dt*t);
 
 
           if(j == 0){
