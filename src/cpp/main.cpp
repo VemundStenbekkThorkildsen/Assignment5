@@ -32,15 +32,15 @@ dx = 1.0/n;
 dt = t_max/tsteps;
 double alpha = dt/(dx*dx);
 
-double ro = 3.5*1e12; //kg/km^3
-double k = (3600*24*365)*2.5*1e3; //J/year*km/C
-double c = 1000; //J/kg/C^-1
+double rho = 3.51*1e12; //kg/km^3
+double k = 2.5*1e5*3.1536; //TJ/10Ma*km/C
+double c_p = 1e-9; //TJ/kg/C^-1
 
 //bwdEuler(n, tsteps, alpha);
 //fwdEuler(n, tsteps, alpha);
 //crankNic(n, tsteps, alpha);
-fwd2Euler(n, tsteps, dt, dx);
-//geoeulerforward(n, tsteps, dt, dx, ro, k, c);
+//fwd2Euler(n, tsteps, dt, dx);
+geoeulerforward(n, tsteps, dt, dx, rho, k, c_p);
 
 
 finish = clock();
