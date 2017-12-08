@@ -89,7 +89,7 @@ u_t \approx \frac{u(x_i,t_j) - u(x_i,t_j - \Delta t)}{\Delta t}
 u_{xx} \approx \frac{u(x_i + \Delta x,t_j) - 2u(x_i,t_j) + u(x_i - \Delta x,t_j)}{\Delta x^2}
 \end{equation}
 
-\noindent It is possible to scale the above equation by $\alpha = \Delta t / \Delta x^2$, so the equation only depends on one scaled variable. This leads to:
+\noindent It is possible to scale the above equation by $\alpha = \Delta t / \Delta x^2$, so the equation only depends on one scaled variable $\alpha$. With a Taylor expansion this leads to:
 
 \begin{equation}
 u_{i,j-1} = -\alpha u_{i-1,j} + (1 + 2\alpha)u_{i,j} - \alpha u_{i+1,j}
@@ -99,15 +99,16 @@ u_{i,j-1} = -\alpha u_{i-1,j} + (1 + 2\alpha)u_{i,j} - \alpha u_{i+1,j}
 
 \begin{equation}
 A = \begin{bmatrix}
-1 + 2\alpha & -\alpha & 0 & 0 &\cdots\\
--\alpha & 1 + 2\alpha & -\alpha & 0 & \cdots\\
-\cdots & \cdots & \cdots & \cdots & \cdots\\
-0 & 0 & \cdots & -\alpha & 1 + 2\alpha\\
+1 + 2\alpha & -\alpha & 0 & \cdots & 0\\
+-\alpha & 1 + 2\alpha & -\alpha & 0 & \vdots\\
+\vdots & \ddots & \ddots & \ddots & \vdots\\
+\vdots & 0 & \ddots & \ddots & -\alpha\\
+0 & \cdots & \cdots & -\alpha & 1 + 2\alpha\\
 
 \end{bmatrix}
 \end{equation}
 
-\noindent It is now possible to find the previous vector $V_{j-1}$ when $V_j$ is known.This means that it is essential to have initial conditions to start the calculations. A more generalized equation can be written as:
+\noindent It is now possible to find the previous vector $V_{j-1}$ when $V_j$ is known. This means that it is essential to have initial conditions to start the calculations. A more generalized equation can be written as:
 
 \begin{equation}
 A^{-1}(AV_j) = A^{-1}(V_{j-1})
@@ -134,10 +135,11 @@ u_{i,j-1} = \alpha u_{i-1,j} + (1 - 2\alpha)u_{i,j} + \alpha u_{i+1,j}
 
 \begin{equation}
 A = \begin{bmatrix}
-1 - 2\alpha & \alpha & 0 & 0 &\cdots\\
-\alpha & 1 - 2\alpha & \alpha & 0 & \cdots\\
-\cdots & \cdots & \cdots & \cdots & \cdots\\
-0 & 0 & \cdots & \alpha & 1 - 2\alpha\\
+1 - 2\alpha & \alpha & 0 & \cdots & 0\\
+\alpha & 1 - 2\alpha & \alpha & 0 & \vdots\\
+\vdots & \ddots & \ddots & \ddots & \vdots\\
+\vdots & 0 & \ddots & \ddots & \alpha\\
+0 & \cdots & \cdots & \alpha & 1 - 2\alpha\\
 
 \end{bmatrix}
 \end{equation}
@@ -282,6 +284,7 @@ Table \ref{truncstab} shows that, even though the Euler forward method is easy t
 \newpage
 \section*{Errors}
 
+\noindent The errors that occur in this the project mainly stem from the instability of the explicit Euler in both one and two dimensions. By being cautions, the results stayed stable as can be observed in the result section of this paper. If the explicit Euler method became unstable, it would be vary obvious by looking at the output files. The values in the file would then mainly consist of NaN and Inf due to the calculation of extremely large variables.
 
 
 

@@ -23,10 +23,6 @@ title('Contour') %Title
 xlabel('x') %Labels and legend
 ylabel('z')
 
-%%
-
-surf(forward)
-
 %% one dimensional plotter
 
 Temp=forward(:,50);
