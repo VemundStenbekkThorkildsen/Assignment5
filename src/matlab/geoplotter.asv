@@ -31,8 +31,8 @@ mesh(forward)
 
 Temp=oneD(:,50);
 z=linspace(0,-121,length(Temp));
-z=z';
+
 plot(Temp,z)
 
-format long
-y=polyfit(Temp,z,2)
+
+y=polyfit(Temp,z,1)
