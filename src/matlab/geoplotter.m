@@ -26,3 +26,6 @@ ylabel('z')
 
 figure(2)
 mesh(forward)
+
+%% one dimensional plotter
+
