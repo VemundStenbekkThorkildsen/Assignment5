@@ -10,24 +10,38 @@ def contourf_plotter(data, n, levels):
      of rectangles.'''
     fig = plt.figure()
     cont = plt.contourf(data, levels=levels, cmap='gnuplot2')
-    cont.set_clim(0, 1)
-    #plt.colorbar(ticks=[0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0], format='%0.2f', label='t')
+    cont.set_clim(8, 1300)
+    plt.colorbar(ticks=[8, 200, 400, 600, 800, 1000, 1200], format='%0.2f', label='T')
+    plt.gca().invert_yaxis()
     plt.xlabel("x")
-    plt.ylabel('y')
-    plt.title('$u(x, y, t)$ with $t_{max} = 1$, $\Delta x = 0.1$ and $\Delta t = 0.02$')
-    plt.savefig("../../plots/geoplot" + str(n) + ".pdf")
+    plt.ylabel('z')
+    plt.title(r'$T$ with $t_{max} = 10$ Ma, ' r'$\Delta x = \frac{1}{120}$ and ' r'$\Delta t = \frac{1}{3e^4}$')
+    plt.savefig("../../plots/contheat10ma.pdf")
+
+def lineplotter(y, x, n):
+    plt.figure()
+    plt.plot(y, x)
+    plt.gca().invert_yaxis()
+    plt.xlabel("T")
+    plt.ylabel('z')
+    plt.title(r'$T$ with $t_{max} = 10$ Ma, ' r'$\Delta x = \frac{1}{120}$ and ' r'$\Delta t = \frac{1}{3e^4}$')
+    plt.savefig("../../plots/lineheat10ma.pdf")
 
 
 def main():
     n = 120
     path = "../../data/"
-    fwd = path + "fwdgeo" + str(n) + ".txt"
+    fwd = path + "heat_10ma.txt"
     data = filereader(fwd)
+    vector = []
+    for i in range(121):
+        vector.append(data[i][i])
     #x = np.linspace(0, 1, len(df[0,:]))
     #levels = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
-    levels = np.arange(0, 1.0005, 0.0005)
-    print(levels)
+    x = np.linspace(0, 121, len(vector))
+    levels = np.arange(0, 1300, 0.5)
     contourf_plotter(data, n, levels)
+    lineplotter(vector, x, n)
 
 
 if __name__=='__main__':
