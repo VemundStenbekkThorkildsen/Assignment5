@@ -31,6 +31,7 @@ void geoeulerforward(int n, int tsteps, double dt, double dx, double rho, double
           else if((i>40)){
               Q = 0.05*1e3*per_10t; //J/10tyear*km^3
           }
+          Q = Q*10000;
           //cout << Q << endl;
           //Q = Q*divider;
           //cout << Q << endl;
