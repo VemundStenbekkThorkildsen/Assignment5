@@ -211,6 +211,7 @@ To solve the geological case, the implicit scheme has to be adjusted with the $1
 
 \begin{table}[H]
 \centering
+\caption{Truncation errors and stability for the three methods}
 \begin{tabular}{|c|c|c|}
 \hline
 Method & Truncation error & Stability for\\
@@ -222,7 +223,6 @@ Euler Backward & $\Delta x^2$, $\Delta t$ & $\Delta x^2$ and $\Delta t^2$\\
 Crank-Nicolson & $\Delta x^2$, $\Delta t^2$ & $\Delta x^2$ and $\Delta t^2$\\
 \hline
 \end{tabular}
-\caption{Truncation errors and stability for the three methods}
 \label{truncstab}
 \end{table}
  
@@ -232,9 +232,16 @@ Crank-Nicolson & $\Delta x^2$, $\Delta t^2$ & $\Delta x^2$ and $\Delta t^2$\\
 
 \begin{figure}[H]
  	\centering
-  	\subfigure[\ $t_1$]{\includegraphics[width = 0.49\textwidth]{../plots/t2.pdf}}  
-  	\subfigure[\ $t_2$]{\includegraphics[width = 0.49\textwidth]{../plots/t1.pdf}}
-  	\caption{\label{fig:5c}Comparison of $t_1$ and $t_2$.}
+  	\subfigure[\ $t_1$]{\includegraphics[width = 0.49\textwidth]{../plots/t1_10.pdf}}  
+  	\subfigure[\ $t_2$]{\includegraphics[width = 0.49\textwidth]{../plots/t2_10.pdf}}
+  	\caption{\label{fig:methods10}Comparison of $t_1$ and $t_2$.}
+\end{figure}
+
+\begin{figure}[H]
+ 	\centering
+  	\subfigure[\ $t_1$]{\includegraphics[width = 0.49\textwidth]{../plots/t1_100.pdf}}  
+  	\subfigure[\ $t_2$]{\includegraphics[width = 0.49\textwidth]{../plots/t2_100.pdf}}
+  	\caption{\label{fig:methods100}Comparison of $t_1$ and $t_2$.}
 \end{figure}
 
 \noindent Figure \ref{fig:5c} highlights the distribution of temperature at two different times. At $t_1$ the different schemes produce different distributions. Forward and backward euler line up closely, in contrast to the Crank-nicolson scheme. At $t_2$ the temperature distribution is linear and all the schemes line up closely. 
