@@ -39,11 +39,11 @@ double c_p = 1e3; //J/kg/C^-1
 
 //double alpha = (dt*k)/(dx*dx);
 
-bwdEuler(n, tsteps, alpha);
-fwdEuler(n, tsteps, alpha);
-crankNic(n, tsteps, alpha);
+//bwdEuler(n, tsteps, alpha);
+//fwdEuler(n, tsteps, alpha);
+//crankNic(n, tsteps, alpha);
 //fwd2Euler(n, tsteps, dt, dx);
-//geoeulerforward(n, tsteps, dt, dx, rho, k, c_p);
+geoeulerforward(n, tsteps, dt, dx, rho, k, c_p);
 
 
 finish = clock();
