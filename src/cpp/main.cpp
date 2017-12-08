@@ -32,18 +32,18 @@ dx = 1.0/n;
 dt = t_max/tsteps;
 double per_year = 3600*24*365;
 double per_10t = per_year*1e4;
-double alpha = dt/(dx*dx);
+//double alpha = dt/(dx*dx);
 double rho = 3.51*1e12; //kg/km^3
 double k = 2.5*1e3*per_10t; //J/10year*km/C
 double c_p = 1e3; //J/kg/C^-1
 
-//double alpha = (dt*k)/(dx*dx);
+double alpha = (dt*k)/(dx*dx);
 
-bwdEuler(n, tsteps, alpha);
-fwdEuler(n, tsteps, alpha);
-crankNic(n, tsteps, alpha);
+//bwdEuler(n, tsteps, alpha);
+//fwdEuler(n, tsteps, alpha);
+//crankNic(n, tsteps, alpha);
 //fwd2Euler(n, tsteps, dt, dx);
-//geoeulerforward(n, tsteps, dt, dx, rho, k, c_p);
+geoeulerforward(n, tsteps, dt, dx, rho, k, c_p);
 
 
 finish = clock();

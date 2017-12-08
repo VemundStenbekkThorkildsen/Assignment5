@@ -10,7 +10,7 @@ void geoeulerforward(int n, int tsteps, double dt, double dx, double rho, double
   mat u = zeros(n+1, n+1);
 
   for(int i = 0; i<=n; i++){
-      u(n,i) = 8.0;
+      u(n,i) = 1300.0;
   }
 
   double Q;
@@ -29,7 +29,7 @@ void geoeulerforward(int n, int tsteps, double dt, double dx, double rho, double
               Q = 0.35*1e3*per_10t; //J/10tyear*km^3
           }
           else if((i>40)){
-              Q = 0.05*1e3*per_10t; //J/10tyear*km^3
+              Q = 0.55*1e3*per_10t; //J/10tyear*km^3
           }
           Q = Q*10000;
           //cout << Q << endl;
@@ -37,10 +37,10 @@ void geoeulerforward(int n, int tsteps, double dt, double dx, double rho, double
           //cout << Q << endl;
 
 
-          if(i == 0){
+          if(i == n){
               u(i,j) = 1300;
           }
-          else if(i == n){
+          else if(i == 0){
               u(i,j) = 8;
           }
           else if(j == 0){
