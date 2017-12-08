@@ -191,6 +191,20 @@ B = \begin{bmatrix}
 \end{equation}
 
 
+\noindent The analytic solution for the one dimensional at equilibrium can solved by using:
+
+ 
+$$t\rightarrow\infty \hspace{1cm} \Rightarrow \hspace{1cm}u_t=0$$
+
+
+This makes Laplaces' equation $\nabla^2u=0$. In one dimension this translates to$u_{xx}=0$. By integrating once: $u_x=c_1$, integrating twice: $u_{xx}=c_1x+c_2$
+The boundary conditions: $u(0)=0$ and $u(1)=1$ makes:
+$$u(0)=0\rightarrow c_2=0$$
+$$u(1)=1 \rightarrow c_1=1$$
+$$\rightarrow u(x,t)_{t\rightarrow\infty}=x$$ 
+
+In other words, a linear graph.
+
 \section*{Implementation}
 
 \noindent The implicit Euler scheme were first implemented due to its simplicity, not needing any tri-diagonal solvers. However, this simplicity comes on the cost of stability which can be seen in Table \ref{truncstab}. Next, the explicit schemes were implemented, as well as the LU triangular solver which is the backbone for the explicit Euler scheme. Crank-Nicolson does not solely rely on the LU solver, but has an implicit component as well.\\
@@ -259,10 +273,28 @@ Crank-Nicolson & $\Delta x^2$, $\Delta t^2$ & $\Delta x^2$ and $\Delta t^2$\\
 	\centering
 	\subfigure[\ No periodic boundary conditions] {\includegraphics[width=0.48\textwidth]{../plots/bonded2D.pdf}}
 	\subfigure[\ Periodic boundary conditions]{\includegraphics[width=0.48\textwidth]{../plots/periodic2D.pdf}}
-	\caption{\label{fig:5d} Two dimensional simulation with and without periodic boundary conditions}
+	\caption{\label{fig:5d} Numerically computed two dimensional simulation with and without periodic boundary conditions}
 \end{figure}
 
 \noindent With periodic boundary conditions, the plot is giving the same result as in the one dimensional case (Figure \ref{fig:methods100}B and Figure \ref{fig:5d}B). In other words, it is showing a uniform increase in temperature with increasing $x$. Without periodic boundary conditions, there is heat loss at ell the edges except the edge with the heat source. 
+
+\begin{figure} [H]
+	\centering
+	\subfigure[\ ] {\includegraphics[width=0.48\textwidth]{../plots/contheat10ma.pdf}}
+	\subfigure[\ ]{\includegraphics[width=0.48\textwidth]{../plots/lineheat10ma.pdf}}
+	\caption{\label{10enriched}Numerically computed temperature distribution in the three layered lithosphere model after 10 million years, plotted in one and two dimensions. }
+\end{figure}
+
+\begin{figure} [H]
+	\centering
+	\subfigure[\ ] {\includegraphics[width=0.48\textwidth]{../plots/contanal.pdf}}
+	\subfigure[\ ]{\includegraphics[width=0.48\textwidth]{../plots/lineanal.pdf}}
+	\caption{\label{10analytic}Analytic solution for the three layered lithosphere model after reaching equilibrium, plotted for one and two dimensions. }
+\end{figure}
+
+
+
+
 
 \begin{table} [H]
 \centering
@@ -299,10 +331,10 @@ Table \ref{truncstab} shows that, even though the Euler forward method is easy t
 \noindent The boundary conditions in the two dimensional case is depending on what kind of system being simulated. If the system in question is a two dimensional rod with a heat source at one end and heat loss at all the other edges, the temperature distribution would look like \ref{fig:5d}A. If the system is simulating the temperature distribution in the lithosphere, it is not expected to be much heat loss in the lateral direction. This can be simulated with periodic boundary conditions, which in essence removes all lateral heat loss. 
 \\
 
-\noindent The last case looked on is the three layered lithosphere model. This was solved in two dimensions, and with a size of $120 \times 120$ km. The focus was put on the vertical temperature distribution. The bottom layer is enriched with a radioactive substance that alters the heat production in this layer only. As there is more radioactive material in the crust, there will be a larger temperature increase in this layer. This can be read directly from the heat production, and is also mirrored in the plots representing temperature distribution before radioactive enrichment ($FIGURERJEGIKKEHAR$).  
+\noindent The last case looked on is the three layered lithosphere model. This was solved in two dimensions, and with a size of $120 \times 120$ km. The focus was put on the vertical temperature distribution. The bottom layer is enriched with a radioactive substance that alters the heat production in this layer only. As there is more radioactive material in the crust, there will be a larger temperature increase in this layer. This can be read directly from the heat production, and is also mirrored in the plots representing temperature distribution before radioactive enrichment ($FIGURERJEGIKKEHAR$).\\ 
 
 
-\noindent After radioactive enrichment, the heat production of the mantle is altered. This increases the temperature in the bottom layer, which in turn increase the temperature throughout the entire model.  The radioactive material consists of three different materials with different half-lives. 
+\noindent After radioactive enrichment, the heat production of the mantle is altered. This increases the temperature in the bottom layer, which in turn increase the temperature throughout the entire model (Figure \ref{10enriched},\ref{10analytic}). The radioactive material consists of three different materials with different half-lives (Table \ref{Decay}). As stated earlier, the reduction of radioactive material is small compared to the time span Table \ref{Decay}). On account of this, it is a good approximation to disregard this effect. 
 
 
 

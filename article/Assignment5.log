@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.21)  8 DEC 2017 20:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.21)  8 DEC 2017 21:40
 entering extended mode
 **./Assignment5.tex
 (Assignment5.tex
@@ -873,73 +873,73 @@ Underfull \hbox (badness 10000) in paragraph at lines 163--164
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 196--197
+Underfull \hbox (badness 10000) in paragraph at lines 210--211
 
  []
 
-[4] <../plots/t1_10.pdf, id=54, 462.52798pt x 346.89601pt>
+[4] [5] <../plots/t1_10.pdf, id=58, 462.52798pt x 346.89601pt>
 File: ../plots/t1_10.pdf Graphic file (type pdf)
 
 <use ../plots/t1_10.pdf>
-Package pdftex.def Info: ../plots/t1_10.pdf used on input line 236.
+Package pdftex.def Info: ../plots/t1_10.pdf used on input line 250.
 (pdftex.def)             Requested size: 204.2504pt x 153.19049pt.
 
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <8> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 236.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 250.
 
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <6> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 236.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 250.
 
-<../plots/t2_10.pdf, id=55, 462.52798pt x 346.89601pt>
+<../plots/t2_10.pdf, id=59, 462.52798pt x 346.89601pt>
 File: ../plots/t2_10.pdf Graphic file (type pdf)
 
 <use ../plots/t2_10.pdf>
-Package pdftex.def Info: ../plots/t2_10.pdf used on input line 237.
+Package pdftex.def Info: ../plots/t2_10.pdf used on input line 251.
 (pdftex.def)             Requested size: 204.2504pt x 153.19049pt.
 
-<../plots/t1_100.pdf, id=56, 462.52798pt x 346.89601pt>
+<../plots/t1_100.pdf, id=60, 462.52798pt x 346.89601pt>
 File: ../plots/t1_100.pdf Graphic file (type pdf)
 
 <use ../plots/t1_100.pdf>
-Package pdftex.def Info: ../plots/t1_100.pdf used on input line 243.
+Package pdftex.def Info: ../plots/t1_100.pdf used on input line 257.
 (pdftex.def)             Requested size: 204.2504pt x 153.19049pt.
 
-<../plots/t2_100.pdf, id=57, 462.52798pt x 346.89601pt>
+<../plots/t2_100.pdf, id=61, 462.52798pt x 346.89601pt>
 File: ../plots/t2_100.pdf Graphic file (type pdf)
 
 <use ../plots/t2_100.pdf>
-Package pdftex.def Info: ../plots/t2_100.pdf used on input line 244.
+Package pdftex.def Info: ../plots/t2_100.pdf used on input line 258.
 (pdftex.def)             Requested size: 204.2504pt x 153.19049pt.
 
 
-LaTeX Warning: Reference `fig:5c' on page 5 undefined on input line 248.
+LaTeX Warning: Reference `fig:5c' on page 6 undefined on input line 262.
 
-<../plots/unstable.pdf, id=58, 462.52798pt x 346.89601pt>
+<../plots/unstable.pdf, id=62, 462.52798pt x 346.89601pt>
 File: ../plots/unstable.pdf Graphic file (type pdf)
 
 <use ../plots/unstable.pdf>
-Package pdftex.def Info: ../plots/unstable.pdf used on input line 252.
+Package pdftex.def Info: ../plots/unstable.pdf used on input line 266.
 (pdftex.def)             Requested size: 200.078pt x 150.05692pt.
- [5pdfTeX warning (ext4): destination with the same identifier (name{table.1}) 
+ [6pdfTeX warning (ext4): destination with the same identifier (name{table.1}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.255 
+l.269 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.255 
+l.269 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.255 
+l.269 
        <../plots/t1_10.pdf> <../plots/t2_10.pdf
 
 pdfTeX warning: pdflatex (file ../plots/t2_10.pdf): PDF inclusion: multiple pdf
@@ -952,38 +952,46 @@ fs with page group included in a single page
 
 pdfTeX warning: pdflatex (file ../plots/t2_100.pdf): PDF inclusion: multiple pd
 fs with page group included in a single page
->] <../plots/bonded2D.pdf, id=280, 462.52798pt x 346.89601pt>
+>] <../plots/bonded2D.pdf, id=284, 462.52798pt x 346.89601pt>
 File: ../plots/bonded2D.pdf Graphic file (type pdf)
 
 <use ../plots/bonded2D.pdf>
-Package pdftex.def Info: ../plots/bonded2D.pdf used on input line 260.
+Package pdftex.def Info: ../plots/bonded2D.pdf used on input line 274.
 (pdftex.def)             Requested size: 200.078pt x 150.05692pt.
 
-<../plots/periodic2D.pdf, id=281, 462.52798pt x 346.89601pt>
+<../plots/periodic2D.pdf, id=285, 462.52798pt x 346.89601pt>
 File: ../plots/periodic2D.pdf Graphic file (type pdf)
 
 <use ../plots/periodic2D.pdf>
-Package pdftex.def Info: ../plots/periodic2D.pdf used on input line 261.
+Package pdftex.def Info: ../plots/periodic2D.pdf used on input line 275.
 (pdftex.def)             Requested size: 200.078pt x 150.05692pt.
- [6pdfTeX warning (ext4): destination with the same identifier (name{figure.3})
+
+<../plots/contheat10ma.pdf, id=288, 462.52798pt x 346.89601pt>
+File: ../plots/contheat10ma.pdf Graphic file (type pdf)
+
+<use ../plots/contheat10ma.pdf>
+Package pdftex.def Info: ../plots/contheat10ma.pdf used on input line 283.
+(pdftex.def)             Requested size: 200.078pt x 150.05692pt.
+
+<../plots/lineheat10ma.pdf, id=289, 462.52798pt x 346.89601pt>
+File: ../plots/lineheat10ma.pdf Graphic file (type pdf)
+
+<use ../plots/lineheat10ma.pdf>
+Package pdftex.def Info: ../plots/lineheat10ma.pdf used on input line 284.
+(pdftex.def)             Requested size: 200.078pt x 150.05692pt.
+ [7pdfTeX warning (ext4): destination with the same identifier (name{figure.3})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.288 \newpage
-              pdfTeX warning (ext4): destination with the same identifier (name
-{figure.4}) has been already used, duplicate ignored
+l.287 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.288 \newpage
-              pdfTeX warning (ext4): destination with the same identifier (name
-{table.2}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.288 \newpage
-               <../plots/unstable.pdf> <../plots/bonded2D.pdf
+l.287 
+       <../plots/unstable.pdf> <../plots/bonded2D.pdf
 
 pdfTeX warning: pdflatex (file ../plots/bonded2D.pdf): PDF inclusion: multiple 
 pdfs with page group included in a single page
@@ -991,46 +999,94 @@ pdfs with page group included in a single page
 
 pdfTeX warning: pdflatex (file ../plots/periodic2D.pdf): PDF inclusion: multipl
 e pdfs with page group included in a single page
+>] <../plots/contanal.pdf, id=439, 462.52798pt x 346.89601pt>
+File: ../plots/contanal.pdf Graphic file (type pdf)
+
+<use ../plots/contanal.pdf>
+Package pdftex.def Info: ../plots/contanal.pdf used on input line 290.
+(pdftex.def)             Requested size: 200.078pt x 150.05692pt.
+
+<../plots/lineanal.pdf, id=440, 462.52798pt x 346.89601pt>
+File: ../plots/lineanal.pdf Graphic file (type pdf)
+
+<use ../plots/lineanal.pdf>
+Package pdftex.def Info: ../plots/lineanal.pdf used on input line 291.
+(pdftex.def)             Requested size: 200.078pt x 150.05692pt.
+ [8pdfTeX warning (ext4): destination with the same identifier (name{figure.5})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.320 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{figure.6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.320 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{table.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.320 \newpage
+               <../plots/contheat10ma.pdf> <../plots/lineheat10ma.pdf
+
+pdfTeX warning: pdflatex (file ../plots/lineheat10ma.pdf): PDF inclusion: multi
+ple pdfs with page group included in a single page
+> <../plots/contanal.pdf
+
+pdfTeX warning: pdflatex (file ../plots/contanal.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+> <../plots/lineanal.pdf
+
+pdfTeX warning: pdflatex (file ../plots/lineanal.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
 >]
-Underfull \hbox (badness 10000) in paragraph at lines 291--293
+Underfull \hbox (badness 10000) in paragraph at lines 323--325
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 294--295
+Underfull \hbox (badness 10000) in paragraph at lines 326--327
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 296--298
+Underfull \hbox (badness 10000) in paragraph at lines 328--330
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 299--301
+Underfull \hbox (badness 10000) in paragraph at lines 331--333
 
  []
 
-[7] [8]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 332.
- [9]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 332.
+
+Underfull \hbox (badness 10000) in paragraph at lines 334--335
+
+ []
+
+[9] [10]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 364.
+ [11]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 364.
  (Assignment5.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 332.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 332.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 364.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 364.
 Package rerunfilecheck Info: File `Assignment5.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 332.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 364.
  ) 
 Here is how much of TeX's memory you used:
- 9679 strings out of 493323
- 133946 string characters out of 3139066
- 247497 words of memory out of 3000000
- 13015 multiletter control sequences out of 15000+200000
+ 9709 strings out of 493323
+ 134552 string characters out of 3139066
+ 247824 words of memory out of 3000000
+ 13033 multiletter control sequences out of 15000+200000
  15539 words of font info for 59 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  28i,10n,45p,972b,325s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1046,9 +1102,9 @@ b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Prog
 ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/
 MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2
 .9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on Assignment5.pdf (9 pages, 4271528 bytes).
+Output written on Assignment5.pdf (11 pages, 7633766 bytes).
 PDF statistics:
- 513 PDF objects out of 1000 (max. 8388607)
- 46 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 642 PDF objects out of 1000 (max. 8388607)
+ 54 named destinations out of 1000 (max. 500000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
