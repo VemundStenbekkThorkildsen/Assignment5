@@ -197,13 +197,89 @@ B = \begin{bmatrix}
 $$t\rightarrow\infty \hspace{1cm} \Rightarrow \hspace{1cm}u_t=0$$
 
 
-This makes Laplaces' equation $\nabla^2u=0$. In one dimension this translates to$u_{xx}=0$. By integrating once: $u_x=c_1$, integrating twice: $u_{xx}=c_1x+c_2$
+\noindent This makes Laplaces' equation $\nabla^2u=0$. In one dimension this translates to$u_{xx}=0$. By integrating once: $u_x=c_1$, integrating twice: $u_{xx}=c_1x+c_2$
 The boundary conditions: $u(0)=0$ and $u(1)=1$ makes:
 $$u(0)=0\rightarrow c_2=0$$
 $$u(1)=1 \rightarrow c_1=1$$
 $$\rightarrow u(x,t)_{t\rightarrow\infty}=x$$ 
 
-In other words, a linear graph.
+\noindent In other words, a linear graph.
+
+$$HERSKALROBINSUGETISSS$$
+
+
+\noindent The analytic solution for the three layer model in one dimension can be solved by considering the heat equation at equilibrium:\\
+
+\begin{equation}
+\nabla(k\nabla T) +Q=\rho c_p \frac{\partial T}{\partial t} \Rightarrow \frac{\partial T}{\partial t}=0
+\end{equation}
+
+\noindent By integrating two times over z, this equals:
+\begin{equation}
+a=-\frac{Q_n}{2K}
+\end{equation}
+\begin{equation}
+\frac{\partial T_n}{\partial z}=2a_nz+b_n
+\end{equation}
+\begin{equation}
+T_n=a_nz^2+b_nz+c_n \hspace{0.5cm} n= 1,2,3
+\end{equation}
+
+\noindent The temperature and heat flow is continuous at the boundaries, which is located at z=0, z=-20 and z=-40:\\
+
+\noindent Heat flow:
+\begin{equation}
+\frac{ \partial T_1(-20)}{\partial z}=\frac{\partial T_2(-20)}{\partial z},
+\frac{\partial T_2(-40)}{\partial z}=\frac{\partial T_3(-40)}{\partial z}
+\end{equation}
+
+\noindent Temperature:
+\begin{equation}
+T_1(0)=8 \rightarrow c_1=8 \hspace{1cm}
+T_1(-20)=T_2(-20) \hspace{1cm}
+T_2(-40)=T_2(-40)
+\end{equation}
+
+
+
+
+These conditions make it possible to express $b_1$ and $b_2$, by $b_3$:\\
+
+\begin{equation}
+b=\begin{bmatrix}
+-6+b_3\\
+2.4+b_3\\
+b_3\\
+\end{bmatrix}
+\end{equation}
+
+These relations have been used to find $b-$ and $c$-values.
+
+
+
+
+
+\vspace{0.5cm}
+$c=\begin{bmatrix}
+8\\
+92\\
+44\\
+\end{bmatrix}$\\
+\vspace{0.5cm}
+We can now use the last boundary:
+$T_3(-120)=1300$
+to find $b_3$, henceforth giving us the values for $b$:\\
+\vspace{0.5cm}
+$b=\begin{bmatrix}
+-29\\
+-20.6\\
+-23.8\\
+\end{bmatrix}$\\
+\vspace{0.5cm}
+and now we gots this bois
+
+
+
 
 \section*{Implementation}
 
@@ -278,18 +354,30 @@ Crank-Nicolson & $\Delta x^2$, $\Delta t^2$ & $\Delta x^2$ and $\Delta t^2$\\
 
 \noindent With periodic boundary conditions, the plot is giving the same result as in the one dimensional case (Figure \ref{fig:methods100}B and Figure \ref{fig:5d}B). In other words, it is showing a uniform increase in temperature with increasing $x$. Without periodic boundary conditions, there is heat loss at ell the edges except the edge with the heat source. 
 
+
+\begin{figure} [H]
+	\centering
+	\subfigure[\ ] {\includegraphics[width=0.48\textwidth]{../plots/contq10ma.pdf}}
+	\subfigure[\ ]{\includegraphics[width=0.48\textwidth]{../plots/lineq10ma.pdf}}
+	\caption{\label{10notenriched}Numerically computed temperature distribution in the three layered lithosphere model after 10 million years, plotted in one and two dimensions without radioactive enrichment. }
+\end{figure}
+
+
+
+
+
 \begin{figure} [H]
 	\centering
 	\subfigure[\ ] {\includegraphics[width=0.48\textwidth]{../plots/contheat10ma.pdf}}
 	\subfigure[\ ]{\includegraphics[width=0.48\textwidth]{../plots/lineheat10ma.pdf}}
-	\caption{\label{10enriched}Numerically computed temperature distribution in the three layered lithosphere model after 10 million years, plotted in one and two dimensions. }
+	\caption{\label{10enriched}Numerically computed temperature distribution in the three layered lithosphere model after 10 million years, plotted in one and two dimensions with radioactive enrichment. }
 \end{figure}
 
 \begin{figure} [H]
 	\centering
 	\subfigure[\ ] {\includegraphics[width=0.48\textwidth]{../plots/contanal.pdf}}
 	\subfigure[\ ]{\includegraphics[width=0.48\textwidth]{../plots/lineanal.pdf}}
-	\caption{\label{10analytic}Analytic solution for the three layered lithosphere model after reaching equilibrium, plotted for one and two dimensions. }
+	\caption{\label{10analytic}Analytic solution for the three layered lithosphere model after reaching equilibrium, plotted for one and two dimensions with radioactive enrichment. }
 \end{figure}
 
 
