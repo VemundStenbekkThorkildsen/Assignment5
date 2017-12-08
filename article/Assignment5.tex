@@ -190,7 +190,8 @@ B = \begin{bmatrix}
 \end{bmatrix}
 \end{equation}
 
-\noindent Implementation\\
+
+\section*{Implementation}
 
 \noindent The implicit Euler scheme were first implemented due to its simplicity, not needing any tri-diagonal solvers. However, this simplicity comes on the cost of stability which can be seen in Table \ref{truncstab}. Next, the explicit schemes were implemented, as well as the LU triangular solver which is the backbone for the explicit Euler scheme. Crank-Nicolson does not solely rely on the LU solver, but has an implicit component as well.\\
 
@@ -261,7 +262,7 @@ Crank-Nicolson & $\Delta x^2$, $\Delta t^2$ & $\Delta x^2$ and $\Delta t^2$\\
 	\caption{\label{fig:5d} Two dimensional simulation with and without periodic boundary conditions}
 \end{figure}
 
-\noindent With periodic boundary conditions, the plot is giving the same result as in the one dimensional case (Figure \ref{fig:5c}A and Figure \ref{fig:5d}A). In other words, it is showing a uniform increase in temperature with increasing $x$.   Without periodic boundary conditions, there is heat loss at ell the edges except the edge with the heat source. 
+\noindent With periodic boundary conditions, the plot is giving the same result as in the one dimensional case (Figure \ref{fig:methods100}B and Figure \ref{fig:5d}B). In other words, it is showing a uniform increase in temperature with increasing $x$. Without periodic boundary conditions, there is heat loss at ell the edges except the edge with the heat source. 
 
 
 \newpage
@@ -270,13 +271,42 @@ Crank-Nicolson & $\Delta x^2$, $\Delta t^2$ & $\Delta x^2$ and $\Delta t^2$\\
 Table \ref{truncstab} shows that, even though the Euler forward method is easy to implement, there are serious limitations for the stability. The Euler backward and Crank-nicolson schemes are stable for all $\Delta x$ and $\Delta t$, but the implementation is more complicated. As the euler forward and Crank-nicolson uses a tridiagonal solver in the computation process, it is expected to be slower than the Euler forward scheme, which uses a more direct approach. Figure \ref{fig:unstable} shows that the forward Euler fluctuates a lot when the stability condition is violated. The stable schemes actually produce correct results, but are drowned by the fluctuations of the forward Euler. 
 \\
 
-\noindent In the one dimensional case, the system converges to an equilibrium. This is shown graphical in figure \ref{fig:5c}A and \ref{fig:5c}B. Given the boundary conditions $u(0,t)=0$ and $u(1,t)=1$ for all $t$, this can be translated to a one dimensional rod with  a heat source at $x=1$ and a heat sink at $x=0$. When starting the computation, the only point with a nonzero temperature is at $x=1$. The heat from this point then spreads through the rod. The heat rises quicker close to the heat source, as is shown in figure \ref{fig:5c}A, but will with time reach an equilibrium (figure \ref{fig:5c}B). It is important to note that the behavior of the system is entirely dependent on the boundary conditions. As an example, it would be possible to add another heat source at $x=0$ and the temperature would rise fast in the edges and slower in the middle. 
+\noindent In the one dimensional case, the system converges to an equilibrium. This is shown graphical in figure \ref{fig:methods10} and \ref{fig:methods100}. When decreasing the $\Delta x$ and $\Delta t$, the graphs become noticeably smoother. Moreover, the errors decrease in accordance with Table \ref{truncstab}.\\
+
+\noindent Given the boundary conditions $u(0,t)=0$ and $u(1,t)=1$ for all $t$, this can be translated to a one dimensional rod with  a heat source at $x=1$ and a heat sink at $x=0$. When starting the computation, the only point with a nonzero temperature is at $x=1$. The heat from this point then spreads through the rod. The heat rises quicker close to the heat source, as is shown in figure \ref{fig:methods10}A and \ref{fig:methods100}A, but will with time reach an equilibrium (figure \ref{fig:methods10}B,\ref{fig:methods100}B). It is important to note that the behavior of the system is entirely dependent on the boundary conditions. As an example, it would be possible to add another heat source at $x=0$ and the temperature would rise from both edges. In this case the temperature distribution would stabilize as an approximately linear function running between $T(x_{min})$ to $T(x_{max})$ when $t$ gets sufficiently large.  
 \\
 
 \noindent The boundary conditions in the two dimensional case is depending on what kind of system being simulated. If the system in question is a two dimensional rod with a heat source at one end and heat loss at all the other edges, the temperature distribution would look like \ref{fig:5d}A. If the system is simulating the temperature distribution in the lithosphere, it is not expected to be much heat loss in the lateral direction. This can be simulated with periodic boundary conditions, which in essence removes all lateral heat loss. 
 \\
 
-\noindent The last case looked on is the three layered lithosphere model. The two bottom layers are enriched with a radioactive substance that alters the heat production in the layer. The enriched area is limited to 150 kilometers of lateral extension. As the enriched area is limited, there will be heat flow in horizontal direction.  
+\noindent The last case looked on is the three layered lithosphere model. This was solved in two dimensions, and with a size of $120 \times 120$ km. The focus was put on the vertical temperature distribution. The bottom layer is enriched with a radioactive substance that alters the heat production in this layer only. As there is more radioactive material in the crust, there will be a larger temperature increase in this layer. This can be read directly from the heat production, and is also mirrored in the plots representing temperature distribution before radioactive enrichment ($FIGURERJEGIKKEHAR$).  
+
+
+\noindent After radioactive enrichment, the heat production of the mantle is altered. This increases the temperature in the bottom layer, which in turn increase the temperature throughout the entire model.  The radioactive material consists of three different materials with different half-lives. 
+
+
+\begin{table}
+\centering
+\caption{\% of different radioactive materials left after 1 Gy}
+\begin{tabular}{|c|c|c|c|}
+\hline
+Radioactive material & Half-life & \% Before simulation & \% after 1 Gy\\
+\hline
+Potassium ($K$) 	 & 1,25 Gy   & 20 \% 				 & 11,49 \% \\
+\hline
+Uranium ($U$)	     & 4,47 Gy   & 40 \%				 & 34,25 \% \\
+\hline
+Thorium ($Th$)		 & 14,0 Gy	 & 40 \%				 & 38,07 \% \\
+\hline
+Sum					 & 			 & 100 \% 				 & 84.44 \%\\
+\hline
+\end{tabular}
+\label{Decay}
+\end{table}
+
+
+
+The enriched area is limited to 150 kilometers of lateral extension. As the enriched area is limited, there will be heat flow in horizontal direction. 
 
 
 
