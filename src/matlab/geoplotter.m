@@ -7,6 +7,7 @@ addpath('..\..\data')
 
 %Loading stable solutions
 forward = load('fwdgeo120.txt');
+gutten = load('maen120.txt');
 
 
 %%
@@ -23,6 +24,19 @@ colorbar
 title('Contour') %Title
 xlabel('x') %Labels and legend
 ylabel('z')
-
+%%
 figure(2)
-mesh(forward)
+contourf(X,Y,gutten,'ShowText','on');
+colorbar
+title('Contour') %Title
+xlabel('x') %Labels and legend
+ylabel('z')
+
+%% 1d
+
+temp=forward(:,50);
+z=linspace(0,120,length(temp));
+
+
+
+plot (z,temp)
