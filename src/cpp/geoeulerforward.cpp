@@ -23,13 +23,13 @@ void geoeulerforward(int n, int tsteps, double dt, double dx, double rho, double
     for(int i=0; i <=n; i++){
       for(int j=0; j <=n; j++){
           if(i<=20){
-              Q = 1.4*1e3*per_10t; //J/10year*km^3
+              Q = 1.4*1e3*per_10t; //J/10tyear*km^3
           }
           else if((i>20) && (i<=40)){
-              Q = 0.35*1e3*per_10t; //J/10year*km^3
+              Q = 0.35*1e3*per_10t; //J/10tyear*km^3
           }
           else if((i>40)){
-              Q = 0.05*1e3*per_10t; //J/10year*km^3
+              Q = 0.05*1e3*per_10t; //J/10tyear*km^3
           }
           //cout << Q << endl;
           //Q = Q*divider;

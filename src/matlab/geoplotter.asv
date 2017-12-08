@@ -7,7 +7,14 @@ addpath('..\..\data')
 
 %Loading stable solutions
 forward = load('fwdgeo120.txt');
+<<<<<<< HEAD
+
+
+%%
+forward(
+=======
 oneD=load('1ma.txt');
+>>>>>>> 790cb01a08d769e09921b615631cae2b6f623cb1
 
 %%
 
@@ -25,6 +32,9 @@ xlabel('x') %Labels and legend
 ylabel('z')
 
 figure(2)
+<<<<<<< HEAD
+mesh(forward)
+=======
 mesh(forward)
 
 %% one dimensional plotter
@@ -36,3 +46,4 @@ plot(Temp,z)
 
 
 y=polyfit(Temp,z,1)
+>>>>>>> 790cb01a08d769e09921b615631cae2b6f623cb1

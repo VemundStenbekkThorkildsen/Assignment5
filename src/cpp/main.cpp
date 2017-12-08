@@ -28,8 +28,8 @@ if (argc == 4){
 
 start = clock();
 
-dx = 1.0/n;
-dt = t_max/tsteps;
+dx = 1.0;
+dt = (t_max/tsteps)*10000;
 double per_year = 3600*24*365;
 double per_10t = per_year*1e4;
 
