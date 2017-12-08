@@ -89,7 +89,7 @@ u_t \approx \frac{u(x_i,t_j) - u(x_i,t_j - \Delta t)}{\Delta t}
 u_{xx} \approx \frac{u(x_i + \Delta x,t_j) - 2u(x_i,t_j) + u(x_i - \Delta x,t_j)}{\Delta x^2}
 \end{equation}
 
-\noindent It is possible to scale the above equation by $\alpha = \Delta t / \Delta x^2$, so the equation only depends on one scaled variable. This leads to:
+\noindent It is possible to scale the above equation by $\alpha = \Delta t / \Delta x^2$, so the equation only depends on one scaled variable $\alpha$. With a Taylor expansion this leads to:
 
 \begin{equation}
 u_{i,j-1} = -\alpha u_{i-1,j} + (1 + 2\alpha)u_{i,j} - \alpha u_{i+1,j}
@@ -99,15 +99,16 @@ u_{i,j-1} = -\alpha u_{i-1,j} + (1 + 2\alpha)u_{i,j} - \alpha u_{i+1,j}
 
 \begin{equation}
 A = \begin{bmatrix}
-1 + 2\alpha & -\alpha & 0 & 0 &\cdots\\
--\alpha & 1 + 2\alpha & -\alpha & 0 & \cdots\\
-\cdots & \cdots & \cdots & \cdots & \cdots\\
-0 & 0 & \cdots & -\alpha & 1 + 2\alpha\\
+1 + 2\alpha & -\alpha & 0 & \cdots & 0\\
+-\alpha & 1 + 2\alpha & -\alpha & 0 & \vdots\\
+\vdots & \ddots & \ddots & \ddots & \vdots\\
+\vdots & 0 & \ddots & \ddots & -\alpha\\
+0 & \cdots & \cdots & -\alpha & 1 + 2\alpha\\
 
 \end{bmatrix}
 \end{equation}
 
-\noindent It is now possible to find the previous vector $V_{j-1}$ when $V_j$ is known.This means that it is essential to have initial conditions to start the calculations. A more generalized equation can be written as:
+\noindent It is now possible to find the previous vector $V_{j-1}$ when $V_j$ is known. This means that it is essential to have initial conditions to start the calculations. A more generalized equation can be written as:
 
 \begin{equation}
 A^{-1}(AV_j) = A^{-1}(V_{j-1})
@@ -134,10 +135,11 @@ u_{i,j-1} = \alpha u_{i-1,j} + (1 - 2\alpha)u_{i,j} + \alpha u_{i+1,j}
 
 \begin{equation}
 A = \begin{bmatrix}
-1 - 2\alpha & \alpha & 0 & 0 &\cdots\\
-\alpha & 1 - 2\alpha & \alpha & 0 & \cdots\\
-\cdots & \cdots & \cdots & \cdots & \cdots\\
-0 & 0 & \cdots & \alpha & 1 - 2\alpha\\
+1 - 2\alpha & \alpha & 0 & \cdots & 0\\
+\alpha & 1 - 2\alpha & \alpha & 0 & \vdots\\
+\vdots & \ddots & \ddots & \ddots & \vdots\\
+\vdots & 0 & \ddots & \ddots & \alpha\\
+0 & \cdots & \cdots & \alpha & 1 - 2\alpha\\
 
 \end{bmatrix}
 \end{equation}
@@ -192,13 +194,13 @@ B = \begin{bmatrix}
 
 \noindent Implementation\\
 
-\noindent The implicit Euler scheme were first implemented due to its simplicity, not needing any tri-diagonal solvers. However, this simplicity comes on the cost of stability which can be seen in Table \ref{truncstab}. Next, the explicit schemes were implemented, as well as the LU triangular solver which is the backbone for the explicit Euler scheme. Crank-Nicolson does not solely rely on the LU solver, but has an implicit component as well.\\
+\noindent The explicit Euler scheme were first implemented due to its simplicity, not needing any tri-diagonal solvers. However, this simplicity comes on the cost of stability which can be seen in Table \ref{truncstab}. Next, the implicit schemes were implemented, as well as the LU triangular solver which is the backbone for the scheme. Crank-Nicolson does not solely rely on an LU solver, but has an implicit component as well.\\
 
-\noindent Only the implicit scheme were extended to an additional dimension. Again, this is for the sake of simplicity, but one has to be aware of the stability requirements.
+\noindent Only the explicit scheme were extended to an additional dimension. Again, this is for the sake of simplicity, but one has to be aware of the stability requirements at all times.
 \\
-When the code is extended an additional dimension, the boundary conditions have to be extended accordingly. A problem arises at the edges of the two-dimensional grid where no boundary conditions exists, because the implicit scheme needs four adjacent points to calculate the current point, but at the edges there are only three available points. To resolve this issue, one has to use the point at the opposite edge.
+When the code is extended an additional dimension, the boundary conditions have to be extended accordingly. A problem arises at the edges of the two-dimensional grid where no boundary conditions exists. The problem is that the explicit scheme needs four adjacent points to calculate the current point, but at the edges there are only three available points. To resolve this issue, one has to use the point at the opposite edge.
 \\
-To solve the geological case, the implicit scheme has to be adjusted with the $1300 C^{\circ}$ at the bottom of the lithosphere and $8 C^{\circ}$ at the top of the crust. Additionally, there is heat production at at certain ranges which were also implemented.
+To solve the geological case, the implicit scheme has to be adjusted with the $1300 C^{\circ}$ at the bottom of the lithosphere and $8 C^{\circ}$ at the top of the crust. These depths correspond to the first and last columns in the calculated matrix. Additionally, there is heat production at at certain ranges which were also implemented between the given column numbers in out matrix.
 
 
 
@@ -267,7 +269,7 @@ Crank-Nicolson & $\Delta x^2$, $\Delta t^2$ & $\Delta x^2$ and $\Delta t^2$\\
 \newpage
 \section*{Discussion}
 
-Table \ref{truncstab} shows that, even though the Euler forward method is easy to implement, there are serious limitations for the stability. The Euler backward and Crank-nicolson schemes are stable for all $\Delta x$ and $\Delta t$, but the implementation is more complicated. As the euler forward and Crank-nicolson uses a tridiagonal solver in the computation process, it is expected to be slower than the Euler forward scheme, which uses a more direct approach. Figure \ref{fig:unstable} shows that the forward Euler fluctuates a lot when the stability condition is violated. The stable schemes actually produce correct results, but are drowned by the fluctuations of the forward Euler. 
+Table \ref{truncstab} shows that, even though the Euler forward method is easy to implement, there are serious limitations for the stability. The Euler backward and Crank-Nicolson schemes are stable for all $\Delta x$ and $\Delta t$, but the implementation is more complicated. As the Euler Forward and Crank-Nicolson uses a tridiagonal solver in the computation process, it is expected to be slower than the Euler forward scheme, which uses a more direct approach. Figure \ref{fig:unstable} shows that the forward Euler fluctuates a lot when the stability condition is violated. The stable schemes actually produce correct results, but are drowned by the fluctuations of the forward Euler. 
 \\
 
 \noindent In the one dimensional case, the system converges to an equilibrium. This is shown graphical in figure \ref{fig:5c}A and \ref{fig:5c}B. Given the boundary conditions $u(0,t)=0$ and $u(1,t)=1$ for all $t$, this can be translated to a one dimensional rod with  a heat source at $x=1$ and a heat sink at $x=0$. When starting the computation, the only point with a nonzero temperature is at $x=1$. The heat from this point then spreads through the rod. The heat rises quicker close to the heat source, as is shown in figure \ref{fig:5c}A, but will with time reach an equilibrium (figure \ref{fig:5c}B). It is important to note that the behavior of the system is entirely dependent on the boundary conditions. As an example, it would be possible to add another heat source at $x=0$ and the temperature would rise fast in the edges and slower in the middle. 
@@ -279,8 +281,10 @@ Table \ref{truncstab} shows that, even though the Euler forward method is easy t
 \noindent The last case looked on is the three layered lithosphere model. The two bottom layers are enriched with a radioactive substance that alters the heat production in the layer. The enriched area is limited to 150 kilometers of lateral extension. As the enriched area is limited, there will be heat flow in horizontal direction.  
 
 
+\newpage
+\section*{Errors}
 
-
+\noindent The errors that occur in this the project mainly stem from the instability of the explicit Euler in both one and two dimensions. By being cautions, the results stayed stable as can be observed in the result section of this paper. If the explicit Euler method became unstable, it would be vary obvious by looking at the output files. The values in the file would then mainly consist of NaN and Inf due to the calculation of extremely large variables.
 
 
 
