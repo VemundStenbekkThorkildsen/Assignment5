@@ -14,8 +14,8 @@ void fwd2Euler(int n, int tsteps, double dt, double dx){
   }
 
   for (int t = 1; t <= tsteps; t++) {
-    for(int i=0; i <=n; i++){
-      for(int j=0; j <=n; j++){
+    for(int i=1; i <=n-1; i++){
+      for(int j=1; j <=n-1; j++){
           if(j == 0){
               u(i,j) = 0;
           }

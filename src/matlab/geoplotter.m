@@ -23,3 +23,6 @@ colorbar
 title('Contour') %Title
 xlabel('x') %Labels and legend
 ylabel('z')
+
+figure(2)
+mesh(forward)
