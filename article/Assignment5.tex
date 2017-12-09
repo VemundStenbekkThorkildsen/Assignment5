@@ -215,13 +215,14 @@ which gives:
 \begin{equation}
 \rightarrow u(x,t)_{t\rightarrow\infty}=x
 \end{equation}
-\noindent In other words, a linear graph. The solution for two dimensions is somewhat harder to solve, but starts in the same manner. That is:\\
+\noindent In other words, a linear graph.\\
+The solution for two dimensions is somewhat harder to solve, but starts in the same manner. That is:\\
 
 \begin{equation}
 \nabla^2_{t\rightarrow \infty}=0 \hspace{0.5cm} \rightarrow \hspace{0.5cm} u_{xx}+u_{yy}=0
 \end{equation}
 
-\noindent Ansatz: $u(x,y)=F(x)G(y)$, giving the double derivative: 
+\noindent Making the ansatz: $u(x,y)=F(x)G(y)$, giving the double derivative: 
 
 \begin{equation}
 u''(x,y)=F_{xx}G+FG_{yy}=0 \rightarrow \frac{F_{xx}}{F}=-\frac{G_{yy}}{G}
@@ -258,7 +259,7 @@ u(x,y)=\sum^\infty_{n=1}A_nsinh(n\pi x)sin(n\pi y)
 
 
 \begin{equation}
-int_0^1 1*sin(n\pi y) dy = \int_0^1 \sum^\infty_{n=1}A_nsinh(n\pi 1)2sin(n\pi y)
+\int_0^1 1*sin(n\pi y) dy = \int_0^1 \sum^\infty_{n=1}A_nsinh(n\pi 1)2sin(n\pi y)
 \end{equation}
 
 \begin{equation}
@@ -317,17 +318,11 @@ T_2(-40)=T_2(-40)
 
 
 
-\noindent These conditions make it possible to express $b_1$ and $b_2$, by $b_3$:\\
-
+\noindent These conditions make it possible to express $b_1$ and $b_2$, by $b_3$.
+\noindent These relations have been used to find the $b-$ and $c$-values using:
 \begin{equation}
-b=\begin{bmatrix}
--6+b_3\\
-2.4+b_3\\
-b_3\\
-\end{bmatrix}
+T_1(20)=T_2(20),\hspace{0.5cm} T_2(40)=T_3(40), \hspace{0.5cm}T_3(120)=1300
 \end{equation}
-
-\noindent These relations have been used to find $b-$ and $c$-values.
 
 
 
@@ -439,23 +434,50 @@ Crank-Nicolson & $\Delta x^2$, $\Delta t^2$ & $\Delta x^2$ and $\Delta t^2$\\
 \noindent By using the relations described in equation $robinergay$, the $c-$values for the analytic expression can be evaluated to be:
 
 \begin{equation}
-c=\begin{bmatrix}
+a_1=\begin{bmatrix}
+-0.28\\
+-0.07\\
+-0.01\\
+\end{bmatrix}\\
+\hspace{0.5cm}
+a_2=\begin{bmatrix}
+-0.28\\
+-0.07\\
+-0.11\\
+\end{bmatrix}\\
+\vspace{0.5cm}
+\end{equation}
+
+\begin{equation}
+c_1=\begin{bmatrix}
 8\\
 92\\
-44\\
+188\\
+\end{bmatrix}\\
+\hspace{0.5cm}
+c_2=\begin{bmatrix}
+8\\
+92\\
+28\\
 \end{bmatrix}\\
 \vspace{0.5cm}
 \end{equation}
 The bottom boundary condition is used to evaluate the $b-$values. As$T_3(-120)=1300$, $c-$values are known, and $b_1,b_2$ are expressed with regard to $b_3$ (equation $robinerfortsattgay$), the $b-$values are easy to find.
 
 \begin{equation}
-b=\begin{bmatrix}
+b_1=\begin{bmatrix}
+-23.66\\
+-15.26\\
+-10.46\\
+\end{bmatrix}\\
+\vspace{0.5cm}
+b_2=\begin{bmatrix}
 -29\\
 -20.6\\
 -23.8\\
 \end{bmatrix}
 \end{equation}
-These values have been used in combination with equation $robinergay2$ to plot the analytic temperature distribution for the three layered lithosphere model (\ref{10analytic}). 
+These values have been used in combination with equation $robinergay2$ to plot the analytic temperature distribution for the three layered lithosphere model without enrichment $(a_1,b_1,c_1)$ and with enrichment $(a_2,b_2,c_2)$(\ref{10analytic}). 
 
 
 \begin{figure} [H]
