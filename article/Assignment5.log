@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.21)  9 DEC 2017 15:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.21)  9 DEC 2017 15:04
 entering extended mode
 **./Assignment5.tex
 (Assignment5.tex
@@ -883,7 +883,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 216--218
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 227--241
+Underfull \hbox (badness 10000) in paragraph at lines 229--230
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 231--241
 
  []
 
@@ -1200,7 +1205,7 @@ b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Prog
 ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/
 MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2
 .9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on Assignment5.pdf (12 pages, 9487443 bytes).
+Output written on Assignment5.pdf (12 pages, 9488292 bytes).
 PDF statistics:
  789 PDF objects out of 1000 (max. 8388607)
  75 named destinations out of 1000 (max. 500000)
