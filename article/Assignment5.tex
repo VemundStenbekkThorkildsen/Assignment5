@@ -426,7 +426,7 @@ Table \ref{truncstab} shows that, even though the Euler forward method is easy t
 \noindent The boundary conditions in the two dimensional case depends on what kind of system being simulated. If the system in question is a two dimensional rod with a heat source at one end and heat loss at all the other edges, the temperature distribution would look like figure \ref{fig:5d}A or figure \ref{fig:2danal}. If the system is for the temperature distribution in the lithosphere, it is not expected to be much heat loss in the lateral direction. This can be simulated with periodic boundary conditions, which in essence removes all lateral heat loss. 
 \\
 
-\noindent The last case looked on is the three layered lithosphere model. This was solved in two dimensions, and with a size of $120 \times 120$ km. The focus was put on the vertical temperature distribution. The model was simulated using periodic boundary conditions and using the forward euler method. To run the code, and get a reasonable result within the time limit, all the constants had to be rescaled. Without scaling, it would have been impossible to get stable results   
+\noindent The last case looked on is the three layered lithosphere model. This was solved in two dimensions, and with a size of $120 \times 120$ km. The focus was put on the vertical temperature distribution. The model was simulated using periodic boundary conditions and using the forward euler method. To run the code, and get a reasonable result within the time limit, all the constants had to be rescaled. Without scaling, it would have been impossible to get stable results for larger time spans.   
 
 
 
@@ -437,21 +437,9 @@ Table \ref{truncstab} shows that, even though the Euler forward method is easy t
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 \newpage
 \section*{Concluding remarks}
-
+Three algorithms have been used in this project, each having different drawbacks and advantages. The explicit forward Euler scheme is efficient and easy to implement, but has a rigorous stability condition for step size. The implicit Euler backward is stable for all step sizes, but is less efficient, as it uses a tridiagonal solver in the computation process. The Crank-Nicolson scheme is stable for all step sizes in addition to providing the smallest truncation error of the schemes. The drawback of this method is somewhat similar to the Euler backward scheme, as both use a tridiagonal solver. 
 
 
 
