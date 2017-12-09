@@ -16,7 +16,7 @@ def contourf_plotter(data, n, levels):
     plt.xlabel("x")
     plt.ylabel('z')
     plt.title(r'$T$ with $t_{max} = 10$ Ma, ' r'$\Delta x = \frac{1}{120}$ and ' r'$\Delta t = \frac{1}{3e^4}$')
-    plt.savefig("../../plots/14kcont10ma.pdf")
+    plt.savefig("../../plots/14kcont10maNorich.pdf")
 
 def lineplotter(y, x, n):
     one = np.ones(121)
@@ -28,13 +28,13 @@ def lineplotter(y, x, n):
     plt.xlabel("T")
     plt.ylabel('z')
     plt.title(r'$T$ with $t_{max} = 10$ Ma, ' r'$\Delta x = \frac{1}{120}$ and ' r'$\Delta t = \frac{1}{3e^4}$')
-    plt.savefig("../../plots/14kline10ma.pdf")
+    plt.savefig("../../plots/14kline10maNorich.pdf")
 
 
 def main():
     n = 120
     path = "../../data/"
-    fwd = path + "14k10Ma.txt"
+    fwd = path + "14k10MaNor.txt"
     data = filereader(fwd)
     vector = []
     for i in range(121):
