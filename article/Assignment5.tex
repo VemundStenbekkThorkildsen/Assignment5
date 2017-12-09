@@ -243,7 +243,7 @@ T_2(-40)=T_2(-40)
 
 
 
-These conditions make it possible to express $b_1$ and $b_2$, by $b_3$:\\
+\noindent These conditions make it possible to express $b_1$ and $b_2$, by $b_3$:\\
 
 \begin{equation}
 b=\begin{bmatrix}
@@ -253,30 +253,9 @@ b_3\\
 \end{bmatrix}
 \end{equation}
 
-These relations have been used to find $b-$ and $c$-values.
+\noindent These relations have been used to find $b-$ and $c$-values.
 
 
-
-
-
-\vspace{0.5cm}
-$c=\begin{bmatrix}
-8\\
-92\\
-44\\
-\end{bmatrix}$\\
-\vspace{0.5cm}
-We can now use the last boundary:
-$T_3(-120)=1300$
-to find $b_3$, henceforth giving us the values for $b$:\\
-\vspace{0.5cm}
-$b=\begin{bmatrix}
--29\\
--20.6\\
--23.8\\
-\end{bmatrix}$\\
-\vspace{0.5cm}
-and now we gots this bois
 
 
 
@@ -354,6 +333,14 @@ Crank-Nicolson & $\Delta x^2$, $\Delta t^2$ & $\Delta x^2$ and $\Delta t^2$\\
 
 \noindent With periodic boundary conditions, the plot is giving the same result as in the one dimensional case (Figure \ref{fig:methods100}B and Figure \ref{fig:5d}B). In other words, it is showing a uniform increase in temperature with increasing $x$. Without periodic boundary conditions, there is heat loss at ell the edges except the edge with the heat source. 
 
+\begin{figure} [H]
+	\centering
+	\includegraphics[width=0.48\textwidth]{../plots/2danal.pdf}
+	\caption{\label{fig:2danal} Plot showing the analytic for the two dimensional case}
+\end{figure}
+
+
+
 
 \begin{figure} [H]
 	\centering
@@ -373,14 +360,34 @@ Crank-Nicolson & $\Delta x^2$, $\Delta t^2$ & $\Delta x^2$ and $\Delta t^2$\\
 	\caption{\label{10enriched}Numerically computed temperature distribution in the three layered lithosphere model after 10 million years, plotted in one and two dimensions with radioactive enrichment. }
 \end{figure}
 
+
+\noindent By using the relations described in equation $robinergay$, the $c-$values for the analytic expression can be evaluated to be:
+
+\begin{equation}
+c=\begin{bmatrix}
+8\\
+92\\
+44\\
+\end{bmatrix}\\
+\vspace{0.5cm}
+\end{equation}
+The bottom boundary condition is used to evaluate the $b-$values. As$T_3(-120)=1300$, $c-$values are known, and $b_1,b_2$ are expressed with regard to $b_3$ (equation $robinerfortsattgay$), the $b-$values are easy to find.
+
+\begin{equation}
+b=\begin{bmatrix}
+-29\\
+-20.6\\
+-23.8\\
+\end{bmatrix}
+\end{equation}
+These values have been used in combination with equation $robinergay2$ to plot the analytic temperature distribution for the three layered lithosphere model (\ref{10analytic}). 
+
 \begin{figure} [H]
 	\centering
 	\subfigure[\ ] {\includegraphics[width=0.48\textwidth]{../plots/contanal.pdf}}
 	\subfigure[\ ]{\includegraphics[width=0.48\textwidth]{../plots/lineanal.pdf}}
 	\caption{\label{10analytic}Analytic solution for the three layered lithosphere model after reaching equilibrium, plotted for one and two dimensions with radioactive enrichment. }
 \end{figure}
-
-
 
 
 
@@ -411,9 +418,9 @@ Sum					 & 			 & 100 \% 				 & 84.44 \%\\
 Table \ref{truncstab} shows that, even though the Euler forward method is easy to implement, there are serious limitations for the stability. The Euler backward and Crank-nicolson schemes are stable for all $\Delta x$ and $\Delta t$, but the implementation is more complicated. As the euler forward and Crank-nicolson uses a tridiagonal solver in the computation process, it is expected to be slower than the Euler forward scheme, which uses a more direct approach. Figure \ref{fig:unstable} shows that the forward Euler fluctuates a lot when the stability condition is violated. The stable schemes actually produce correct results, but are drowned by the fluctuations of the forward Euler. 
 \\
 
-\noindent In the one dimensional case, the system converges to an equilibrium. This is shown graphical in figure \ref{fig:methods10} and \ref{fig:methods100}. When decreasing the $\Delta x$ and $\Delta t$, the graphs become noticeably smoother. Moreover, the errors decrease in accordance with Table \ref{truncstab}.\\
+\noindent In the one dimensional case, the system converges to an equilibrium. This is shown graphical in figure \ref{fig:methods10} and \ref{fig:methods100}. When decreasing the $\Delta x$ and $\Delta t$, the graphs become noticeably smoother. Moreover, the errors decrease in accordance with Table \ref{truncstab}. It is hard to compare the three schemes in terms of quality. The explicit scheme is unstable for some values (Table \ref{truncstab}, Figure \ref{fig:unstable}), but is easy to implement and computing efficient. The implicit Euler backward scheme is less computing efficient than the explicit scheme, but does not suffer from the same stability limitations. The Crank-Nicolson scheme is stable for all $\Delta t$ and $\Delta x$ and has the smallest truncation error when $\Delta t$ is small, but has its drawback in computing efficiency. On account of the above mentioned properties, it is impossible to unambiguously decide which scheme is best. Each has its advantages and drawbacks, and the most favorable scheme depends heavily on what is to be computed.\\
 
-\noindent Given the boundary conditions $u(0,t)=0$ and $u(1,t)=1$ for all $t$, this can be translated to a one dimensional rod with  a heat source at $x=1$ and a heat sink at $x=0$. When starting the computation, the only point with a nonzero temperature is at $x=1$. The heat from this point then spreads through the rod. The heat rises quicker close to the heat source, as is shown in figure \ref{fig:methods10}A and \ref{fig:methods100}A, but will with time reach an equilibrium (figure \ref{fig:methods10}B,\ref{fig:methods100}B). It is important to note that the behavior of the system is entirely dependent on the boundary conditions. As an example, it would be possible to add another heat source at $x=0$ and the temperature would rise from both edges. In this case the temperature distribution would stabilize as an approximately linear function running between $T(x_{min})$ to $T(x_{max})$ when $t$ gets sufficiently large.  
+\noindent Given the boundary conditions $u(0,t)=0$ and $u(1,t)=1$ for all $t$, this can be translated to a one dimensional rod with  a heat source at $x=1$ and a heat sink at $x=0$. When starting the computation, the only point with a nonzero temperature is at $x=1$. The heat from this point then spreads through the rod. The heat rises quicker close to the heat source, as is shown in figure \ref{fig:methods10}A and \ref{fig:methods100}A, but will with time reach an equilibrium (figure \ref{fig:methods10}B,\ref{fig:methods100}B). It is important to note that the behavior of the system is entirely dependent on the boundary conditions. As an example, it would be possible to add another heat source at $x=0$ and the temperature would rise from both edges.   
 \\
 
 \noindent The boundary conditions in the two dimensional case is depending on what kind of system being simulated. If the system in question is a two dimensional rod with a heat source at one end and heat loss at all the other edges, the temperature distribution would look like \ref{fig:5d}A. If the system is simulating the temperature distribution in the lithosphere, it is not expected to be much heat loss in the lateral direction. This can be simulated with periodic boundary conditions, which in essence removes all lateral heat loss. 
