@@ -10,6 +10,9 @@ using namespace std;
 
 
 int main(int argc, char *argv[]) //n,tmax,tsteps
+//Initializing the system where n, t_steps and t_max is read
+//from command line. The different functions are impolemented
+//methods.h
 {
 
 int n, tsteps;

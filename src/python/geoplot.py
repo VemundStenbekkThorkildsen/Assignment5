@@ -16,22 +16,25 @@ def contourf_plotter(data, n, levels):
     plt.xlabel("x")
     plt.ylabel('z')
     plt.title(r'$T$ with $t_{max} = 10$ Ma, ' r'$\Delta x = \frac{1}{120}$ and ' r'$\Delta t = \frac{1}{3e^4}$')
-    plt.savefig("../../plots/contheat10ma.pdf")
+    plt.savefig("../../plots/14kcont10ma.pdf")
 
 def lineplotter(y, x, n):
+    one = np.ones(121)
     plt.figure()
     plt.plot(y, x)
+    plt.plot(y, one*(20))
+    plt.plot(y, one*(40))
     plt.gca().invert_yaxis()
     plt.xlabel("T")
     plt.ylabel('z')
     plt.title(r'$T$ with $t_{max} = 10$ Ma, ' r'$\Delta x = \frac{1}{120}$ and ' r'$\Delta t = \frac{1}{3e^4}$')
-    plt.savefig("../../plots/lineheat10ma.pdf")
+    plt.savefig("../../plots/14kline10ma.pdf")
 
 
 def main():
     n = 120
     path = "../../data/"
-    fwd = path + "heat_10ma.txt"
+    fwd = path + "14k10Ma.txt"
     data = filereader(fwd)
     vector = []
     for i in range(121):
