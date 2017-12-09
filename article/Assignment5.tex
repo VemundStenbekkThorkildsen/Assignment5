@@ -61,19 +61,22 @@ FYS4150\\
 Project 5, deadline December 10.
 }
  \includegraphics[scale=0.075]{figures/uio.png}\\
-Author: Robin David Kifle, Sander Wågønes Losnedahl, Sigmund Slang, Vemund Stenbekk Thorkildsen\\
+Authors: Robin David Kifle, Sander Wågønes Losnedahl, Sigmund Slang and Vemund Stenbekk Thorkildsen\\
 \vspace{1cm}
 {\LARGE\bf
 Abstract
 }\\
 \end{center}
+We have developed a program to simulate temperature distribution and development. This has been done using three different algorithms. Namely the Euler forward, Euler backward and the Crank-nicolson schemes. All the algorithms have different advantages and drawbacks. For instance, the Euler forward scheme is efficient and easy to implement, but can be unstable for unfavorable step sizes. We used these algorithms to evaluate three models. The first being the temperature distribution in a simple one dimensional rod. This was evaluated by simulating the temperature with all three schemes. When moving to the second model, an idealized 
 
 \newpage
 \section*{Introduction}
-The aim of this project is to use three different finite difference schemes to simulate temperature variations in Earths crust and upper mantle. The three schemes are the implicit Euler backward, explicit Euler forward and the Crank-nicolson scheme. This is a combination of the Euler forward and backward schemes. In this report, there will be focus on testing the three algorithms in one dimension, before moving on to two dimensions. The first part will mostly revolve around idealized situations in one dimension, before moving on to an idealized two dimensional problem. This is followed by a three layered model of the earths crust, where each has different parameters. All the code, runs and figures for the project is accessible \href{https://github.com/VemundStenbekkThorkildsen/Assignment5}{\textcolor{blue}{here}}.  
+The aim of this project is to use three different finite difference schemes to simulate temperature variations for three different models. The three schemes are the implicit Euler backward, explicit Euler forward and the Crank-Nicolson scheme. This is a combination of the Euler forward and backward schemes. These schemes can be used to simulate a variety of physical phenomena, but for simplicity will here be discussed in terms of temperature only.\\ 
+
+\noindent The first part will mostly revolve around idealized situations in one dimension, before moving on to an idealized two dimensional problem. This is followed by a three layered model of the earths crust, where each has different parameters of heat production. The three layered model will be simulated two times. Once for initial heat production parameters, and once where the heat production of the bottom layer (mantle) is increased by just over an order of magnitude. All the code, runs and figures for the project is accessible \href{https://github.com/VemundStenbekkThorkildsen/Assignment5}{\textcolor{blue}{here}}.  
 
 
-\newpage
+
 \section*{Method}
 
 \noindent The three different schemes are differential equations that can be rewritten as a set of linear equations. The Euler forward is explicit, the Euler backward is implicit, while the Crank-Nicolson scheme is a combination of the two preceding schemes. These systems can be rewritten as sets of linear equations. \\
@@ -148,7 +151,7 @@ A = \begin{bmatrix}
 V_{j+1} = AVj
 \end{equation}
 
-\noindent We generalize again and get:
+\noindent Generalizing again and get:
 
 \begin{equation}
 V_{j+1}= A^{j+1}V_{0}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.21)  9 DEC 2017 11:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.21)  9 DEC 2017 11:42
 entering extended mode
 **./Assignment5.tex
 (Assignment5.tex
@@ -835,126 +835,131 @@ Package pdftex.def Info: figures/uio.png used on input line 63.
 [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./figures/uio.png (PNG co
-py)>] [2]
-Underfull \hbox (badness 10000) in paragraph at lines 79--80
+py)>]
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
  []
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 82.
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--83
+
+ []
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 85.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 82.
+LaTeX Font Info:    Try loading font information for U+msb on input line 85.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+wasy on input line 82.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 85.
 
 (C:\Users\vemun\AppData\Roaming\MiKTeX\2.9\tex\latex\wasysym\uwasy.fd
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 )
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <7> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 82.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 85.
 
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <5> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 82.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 85.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--84
+Underfull \hbox (badness 10000) in paragraph at lines 85--87
+
+ []
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 166--167
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 163--164
+Underfull \hbox (badness 10000) in paragraph at lines 214--215
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--212
-
- []
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 228--229
+Underfull \hbox (badness 10000) in paragraph at lines 231--232
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 246--247
+Underfull \hbox (badness 10000) in paragraph at lines 249--250
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 265--266
+Underfull \hbox (badness 10000) in paragraph at lines 268--269
 
  []
 
-[5] <../plots/t1_10.pdf, id=65, 462.52798pt x 346.89601pt>
+[4] <../plots/t1_10.pdf, id=61, 462.52798pt x 346.89601pt>
 File: ../plots/t1_10.pdf Graphic file (type pdf)
 
 <use ../plots/t1_10.pdf>
-Package pdftex.def Info: ../plots/t1_10.pdf used on input line 305.
+Package pdftex.def Info: ../plots/t1_10.pdf used on input line 308.
 (pdftex.def)             Requested size: 204.2504pt x 153.19049pt.
 
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <8> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 305.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 308.
 
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <6> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 305.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 308.
 
-<../plots/t2_10.pdf, id=66, 462.52798pt x 346.89601pt>
+<../plots/t2_10.pdf, id=62, 462.52798pt x 346.89601pt>
 File: ../plots/t2_10.pdf Graphic file (type pdf)
 
 <use ../plots/t2_10.pdf>
-Package pdftex.def Info: ../plots/t2_10.pdf used on input line 306.
+Package pdftex.def Info: ../plots/t2_10.pdf used on input line 309.
 (pdftex.def)             Requested size: 204.2504pt x 153.19049pt.
 
-<../plots/t1_100.pdf, id=67, 462.52798pt x 346.89601pt>
+<../plots/t1_100.pdf, id=63, 462.52798pt x 346.89601pt>
 File: ../plots/t1_100.pdf Graphic file (type pdf)
 
 <use ../plots/t1_100.pdf>
-Package pdftex.def Info: ../plots/t1_100.pdf used on input line 312.
+Package pdftex.def Info: ../plots/t1_100.pdf used on input line 315.
 (pdftex.def)             Requested size: 204.2504pt x 153.19049pt.
 
-<../plots/t2_100.pdf, id=68, 462.52798pt x 346.89601pt>
+<../plots/t2_100.pdf, id=64, 462.52798pt x 346.89601pt>
 File: ../plots/t2_100.pdf Graphic file (type pdf)
 
 <use ../plots/t2_100.pdf>
-Package pdftex.def Info: ../plots/t2_100.pdf used on input line 313.
+Package pdftex.def Info: ../plots/t2_100.pdf used on input line 316.
 (pdftex.def)             Requested size: 204.2504pt x 153.19049pt.
 
 
-LaTeX Warning: Reference `fig:5c' on page 6 undefined on input line 317.
+LaTeX Warning: Reference `fig:5c' on page 5 undefined on input line 320.
 
-<../plots/unstable.pdf, id=69, 462.52798pt x 346.89601pt>
+<../plots/unstable.pdf, id=65, 462.52798pt x 346.89601pt>
 File: ../plots/unstable.pdf Graphic file (type pdf)
 
 <use ../plots/unstable.pdf>
-Package pdftex.def Info: ../plots/unstable.pdf used on input line 321.
+Package pdftex.def Info: ../plots/unstable.pdf used on input line 324.
 (pdftex.def)             Requested size: 200.078pt x 150.05692pt.
- [6pdfTeX warning (ext4): destination with the same identifier (name{table.1}) 
+ [5pdfTeX warning (ext4): destination with the same identifier (name{table.1}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.324 
+l.327 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.324 
+l.327 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.324 
+l.327 
        <../plots/t1_10.pdf> <../plots/t2_10.pdf
 
 pdfTeX warning: pdflatex (file ../plots/t2_10.pdf): PDF inclusion: multiple pdf
@@ -967,38 +972,38 @@ fs with page group included in a single page
 
 pdfTeX warning: pdflatex (file ../plots/t2_100.pdf): PDF inclusion: multiple pd
 fs with page group included in a single page
->] <../plots/bonded2D.pdf, id=291, 462.52798pt x 346.89601pt>
+>] <../plots/bonded2D.pdf, id=287, 462.52798pt x 346.89601pt>
 File: ../plots/bonded2D.pdf Graphic file (type pdf)
 
 <use ../plots/bonded2D.pdf>
-Package pdftex.def Info: ../plots/bonded2D.pdf used on input line 329.
+Package pdftex.def Info: ../plots/bonded2D.pdf used on input line 332.
 (pdftex.def)             Requested size: 200.078pt x 150.05692pt.
 
-<../plots/periodic2D.pdf, id=292, 462.52798pt x 346.89601pt>
+<../plots/periodic2D.pdf, id=288, 462.52798pt x 346.89601pt>
 File: ../plots/periodic2D.pdf Graphic file (type pdf)
 
 <use ../plots/periodic2D.pdf>
-Package pdftex.def Info: ../plots/periodic2D.pdf used on input line 330.
+Package pdftex.def Info: ../plots/periodic2D.pdf used on input line 333.
 (pdftex.def)             Requested size: 200.078pt x 150.05692pt.
 
-<../plots/2danal.pdf, id=295, 462.52798pt x 346.89601pt>
+<../plots/2danal.pdf, id=291, 462.52798pt x 346.89601pt>
 File: ../plots/2danal.pdf Graphic file (type pdf)
 
 <use ../plots/2danal.pdf>
-Package pdftex.def Info: ../plots/2danal.pdf used on input line 338.
+Package pdftex.def Info: ../plots/2danal.pdf used on input line 341.
 (pdftex.def)             Requested size: 200.078pt x 150.05692pt.
- [7pdfTeX warning (ext4): destination with the same identifier (name{figure.3})
+ [6pdfTeX warning (ext4): destination with the same identifier (name{figure.3})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.341 
+l.344 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.341 
+l.344 
        <../plots/unstable.pdf> <../plots/bonded2D.pdf
 
 pdfTeX warning: pdflatex (file ../plots/bonded2D.pdf): PDF inclusion: multiple 
@@ -1007,51 +1012,51 @@ pdfs with page group included in a single page
 
 pdfTeX warning: pdflatex (file ../plots/periodic2D.pdf): PDF inclusion: multipl
 e pdfs with page group included in a single page
->] <../plots/contq10ma.pdf, id=445, 462.52798pt x 346.89601pt>
+>] <../plots/contq10ma.pdf, id=440, 462.52798pt x 346.89601pt>
 File: ../plots/contq10ma.pdf Graphic file (type pdf)
 
 <use ../plots/contq10ma.pdf>
-Package pdftex.def Info: ../plots/contq10ma.pdf used on input line 347.
+Package pdftex.def Info: ../plots/contq10ma.pdf used on input line 350.
 (pdftex.def)             Requested size: 200.078pt x 150.05692pt.
 
-<../plots/lineq10ma.pdf, id=446, 462.52798pt x 346.89601pt>
+<../plots/lineq10ma.pdf, id=441, 462.52798pt x 346.89601pt>
 File: ../plots/lineq10ma.pdf Graphic file (type pdf)
 
 <use ../plots/lineq10ma.pdf>
-Package pdftex.def Info: ../plots/lineq10ma.pdf used on input line 348.
+Package pdftex.def Info: ../plots/lineq10ma.pdf used on input line 351.
 (pdftex.def)             Requested size: 200.078pt x 150.05692pt.
 
-<../plots/contheat10ma.pdf, id=447, 462.52798pt x 346.89601pt>
+<../plots/contheat10ma.pdf, id=442, 462.52798pt x 346.89601pt>
 File: ../plots/contheat10ma.pdf Graphic file (type pdf)
 
 <use ../plots/contheat10ma.pdf>
-Package pdftex.def Info: ../plots/contheat10ma.pdf used on input line 358.
+Package pdftex.def Info: ../plots/contheat10ma.pdf used on input line 361.
 (pdftex.def)             Requested size: 200.078pt x 150.05692pt.
 
-<../plots/lineheat10ma.pdf, id=448, 462.52798pt x 346.89601pt>
+<../plots/lineheat10ma.pdf, id=443, 462.52798pt x 346.89601pt>
 File: ../plots/lineheat10ma.pdf Graphic file (type pdf)
 
 <use ../plots/lineheat10ma.pdf>
-Package pdftex.def Info: ../plots/lineheat10ma.pdf used on input line 359.
+Package pdftex.def Info: ../plots/lineheat10ma.pdf used on input line 362.
 (pdftex.def)             Requested size: 200.078pt x 150.05692pt.
- [8pdfTeX warning (ext4): destination with the same identifier (name{figure.5})
+ [7pdfTeX warning (ext4): destination with the same identifier (name{figure.5})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.373 \end{equation}
+l.376 \end{equation}
                     pdfTeX warning (ext4): destination with the same identifier
  (name{figure.6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.373 \end{equation}
+l.376 \end{equation}
                     pdfTeX warning (ext4): destination with the same identifier
  (name{figure.7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.373 \end{equation}
+l.376 \end{equation}
                      <../plots/2danal.pdf> <../plots/contq10ma.pdf
 
 pdfTeX warning: pdflatex (file ../plots/contq10ma.pdf): PDF inclusion: multiple
@@ -1069,54 +1074,49 @@ ple pdfs with page group included in a single page
 pdfTeX warning: pdflatex (file ../plots/lineheat10ma.pdf): PDF inclusion: multi
 ple pdfs with page group included in a single page
 >]
-Overfull \hbox (0.28882pt too wide) in paragraph at lines 373--375
+Overfull \hbox (0.28882pt too wide) in paragraph at lines 376--378
 \OT1/cmr/m/n/10 are known, and $\OML/cmm/m/it/10 b[]; b[]$ \OT1/cmr/m/n/10 are 
 ex-pressed with re-gard to $\OML/cmm/m/it/10 b[]$ \OT1/cmr/m/n/10 (equa-tion $\
 OML/cmm/m/it/10 robinerfortsattgay$\OT1/cmr/m/n/10 ), the $\OML/cmm/m/it/10 b\O
 MS/cmsy/m/n/10  $\OT1/cmr/m/n/10 values
  []
 
-<../plots/contanal.pdf, id=647, 462.52798pt x 346.89601pt>
+<../plots/contanal.pdf, id=643, 462.52798pt x 346.89601pt>
 File: ../plots/contanal.pdf Graphic file (type pdf)
 
 <use ../plots/contanal.pdf>
-Package pdftex.def Info: ../plots/contanal.pdf used on input line 387.
+Package pdftex.def Info: ../plots/contanal.pdf used on input line 390.
 (pdftex.def)             Requested size: 200.078pt x 150.05692pt.
 
-<../plots/lineanal.pdf, id=648, 462.52798pt x 346.89601pt>
+<../plots/lineanal.pdf, id=644, 462.52798pt x 346.89601pt>
 File: ../plots/lineanal.pdf Graphic file (type pdf)
 
 <use ../plots/lineanal.pdf>
-Package pdftex.def Info: ../plots/lineanal.pdf used on input line 388.
+Package pdftex.def Info: ../plots/lineanal.pdf used on input line 391.
 (pdftex.def)             Requested size: 200.078pt x 150.05692pt.
- [9pdfTeX warning (ext4): destination with the same identifier (name{figure.8})
+ [8pdfTeX warning (ext4): destination with the same identifier (name{figure.8})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.415 \newpage
+l.418 \newpage
               pdfTeX warning (ext4): destination with the same identifier (name
 {table.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.415 \newpage
+l.418 \newpage
                <../plots/contanal.pdf> <../plots/lineanal.pdf
 
 pdfTeX warning: pdflatex (file ../plots/lineanal.pdf): PDF inclusion: multiple 
 pdfs with page group included in a single page
 >]
-Underfull \hbox (badness 10000) in paragraph at lines 418--420
+Underfull \hbox (badness 10000) in paragraph at lines 421--423
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 421--422
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 423--425
+Underfull \hbox (badness 10000) in paragraph at lines 424--425
 
  []
 
@@ -1126,34 +1126,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 426--428
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 433--434
+Underfull \hbox (badness 10000) in paragraph at lines 429--431
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 436--437
+
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 445--446
 
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 442--443
-
- []
-
-[11]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 453.
- [12]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 453.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 456.
+ [11]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 456.
  (Assignment5.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 453.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 453.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 456.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 456.
 Package rerunfilecheck Info: File `Assignment5.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 453.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 456.
  ) 
 Here is how much of TeX's memory you used:
- 9740 strings out of 493323
- 135090 string characters out of 3139066
- 248151 words of memory out of 3000000
+ 9739 strings out of 493323
+ 135083 string characters out of 3139066
+ 249151 words of memory out of 3000000
  13047 multiletter control sequences out of 15000+200000
  15539 words of font info for 59 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1170,9 +1175,9 @@ b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Prog
 ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/
 MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2
 .9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on Assignment5.pdf (12 pages, 9480484 bytes).
+Output written on Assignment5.pdf (11 pages, 9480800 bytes).
 PDF statistics:
- 780 PDF objects out of 1000 (max. 8388607)
- 68 named destinations out of 1000 (max. 500000)
+ 776 PDF objects out of 1000 (max. 8388607)
+ 67 named destinations out of 1000 (max. 500000)
  76 words of extra memory for PDF output out of 10000 (max. 10000000)
 
