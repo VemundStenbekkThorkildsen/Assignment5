@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.21)  9 DEC 2017 21:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.21)  9 DEC 2017 21:50
 entering extended mode
 **./Assignment5.tex
 (Assignment5.tex
@@ -1223,7 +1223,7 @@ Here is how much of TeX's memory you used:
  13062 multiletter control sequences out of 15000+200000
  15539 words of font info for 59 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 28i,10n,45p,1970b,348s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 28i,10n,45p,2169b,348s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKT
@@ -1236,7 +1236,7 @@ b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Prog
 ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/
 MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2
 .9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on Assignment5.pdf (13 pages, 11180831 bytes).
+Output written on Assignment5.pdf (13 pages, 11181055 bytes).
 PDF statistics:
  896 PDF objects out of 1000 (max. 8388607)
  91 named destinations out of 1000 (max. 500000)
