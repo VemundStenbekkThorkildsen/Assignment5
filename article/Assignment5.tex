@@ -194,21 +194,70 @@ B = \begin{bmatrix}
 \end{equation}
 
 
-\noindent The analytic solution for the one dimensional at equilibrium can solved by using:
-
- 
-$$t\rightarrow\infty \hspace{1cm} \Rightarrow \hspace{1cm}u_t=0$$
+\noindent The analytic solution for the one dimensional at equilibrium can be solved by using:
 
 
-\noindent This makes Laplaces' equation $\nabla^2u=0$. In one dimension this translates to$u_{xx}=0$. By integrating once: $u_x=c_1$, integrating twice: $u_{xx}=c_1x+c_2$
-The boundary conditions: $u(0)=0$ and $u(1)=1$ makes:
-$$u(0)=0\rightarrow c_2=0$$
-$$u(1)=1 \rightarrow c_1=1$$
-$$\rightarrow u(x,t)_{t\rightarrow\infty}=x$$ 
+\begin{equation} 
+t\rightarrow\infty \hspace{1cm} \Rightarrow \hspace{1cm}u_t=0
+\end{equation}
 
-\noindent In other words, a linear graph.
+\noindent This makes Laplaces' equation $\nabla^2u=0$. In one dimension this translates to $u_{xx}=0$. By integrating once: $u_x=c_1$, integrating twice: $u_{xx}=c_1x+c_2$. Using the boundary conditions $u(0)=0$ and $u(1)=1$ makes:
 
-$$HERSKALROBINSUGETISSS$$
+\begin{equation}
+u(0)=0\rightarrow c_2=0
+\end{equation}
+
+\begin{equation}
+u(1)=1 \rightarrow c_1=1
+\end{equation}
+which gives:
+\begin{equation}
+\rightarrow u(x,t)_{t\rightarrow\infty}=x
+\end{equation}
+\noindent In other words, a linear graph. The solution for two dimensions is somewhat harder to solve, but starts in the same manner. That is:\\
+
+\begin{equation}
+\nabla^2_{t\rightarrow \infty}=0 \hspace{0.5cm} \rightarrow \hspace{0.5cm} u_{xx}+u_{yy}=0
+\end{equation}
+
+\noindent Ansatz: $u(x,y)=F(x)G(y)$, giving the double derivative 
+
+\begin{equation}
+u''(x,y)=F_{xx}G+FG_{yy}=0 \rightarrow \frac{F_{xx}}{F}=-\frac{G_{yy}}{G}
+\end{equation}
+\vspace{0.5cm}
+, this has to equal a constant $\lambda$.
+Because of our boundaries, $G(y)$ has to equal $sin(\sqrt{\lambda}y)$.\\
+And our boundaries $G(0)=0$ and $G(H=1)=0$ gives us $\lambda=(n\pi)^2$\\
+\vspace{0.5cm}
+Now we look at $F_{xx}=\lambda F$\\
+We make a new ansatz: $F(x)=Ae^{(n\pi x)}+Be^{-(n\pi x)}$
+Our boundary $F(0)=0$ gives us $B=-A$\\
+\vspace{0.5cm}
+which gives us our expression for $F(x)$
+$\rightarrow F(x)=Asinh(n\pi x)$
+\vspace{0.5cm}
+Giving our solution $u(x,y)=F(x)G(x)$:\\
+\begin{equation}
+u(x,y)=\sum^\infty_{n=1}A_nsinh(n\pi x)sin(n\pi y)
+\end{equation}
+we then use our last boundary $u(1,y)=1$ to find an expression for $A_n$ by taking the integral of both sides: $$\int_0^1 1*sin(m\pi y) dy = \int_0^1 \sum^\infty_{n=1}A_nsinh(n\pi 1)sin(n\pi y)*sin(m\pi y)$$\\
+for $n\neq m$, the integral on the right is equal to 0. Because of this the integral can be written as:
+
+$$\int_0^1 1*sin(n\pi y) dy = \int_0^1 \sum^\infty_{n=1}A_nsinh(n\pi 1)2sin(n\pi y)$$\\
+$$= \frac{A_n}{2}sinh(n\pi) $$\\
+Giving us an equation for $A_n$:\\
+$$\frac{2}{sinh(n\pi)}\int_0^1sin(n\pi y) dy$$
+The integral in the equation has solutions:
+odd $n = \frac{2}{n\pi}$, even $n = 0$ we can now solve the problem analytic with ein n så bare får det egentlig fra 0-evig men me har gjort det me n fra 0-100 cuz its fine my nigga\\
+
+
+
+
+
+
+
+
 
 
 \noindent The analytic solution for the three layer model in one dimension can be solved by considering the heat equation at equilibrium:\\
@@ -338,7 +387,7 @@ Crank-Nicolson & $\Delta x^2$, $\Delta t^2$ & $\Delta x^2$ and $\Delta t^2$\\
 
 \begin{figure} [H]
 	\centering
-	\includegraphics[width=0.48\textwidth]{../plots/2danal.pdf}
+	\includegraphics[width=0.48\textwidth]{../plots/2Danal.pdf}
 	\caption{\label{fig:2danal} Plot showing the analytic for the two dimensional case}
 \end{figure}
 
