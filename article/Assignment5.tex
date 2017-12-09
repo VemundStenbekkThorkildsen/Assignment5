@@ -381,7 +381,13 @@ Crank-Nicolson & $\Delta x^2$, $\Delta t^2$ & $\Delta x^2$ and $\Delta t^2$\\
   	\caption{\label{fig:methods100}Comparison of $t_1$ and $t_2$.}
 \end{figure}
 
-\noindent Figure \ref{fig:5c} highlights the distribution of temperature at two different times. At $t_1$ the different schemes produce different distributions. Forward and backward euler line up closely, in contrast to the Crank-nicolson scheme. At $t_2$ the temperature distribution is linear and all the schemes line up closely. 
+\begin{figure} [H]
+	\centering
+	\includegraphics[width=0.48\textwidth]{../plots/1Danal.pdf}
+	\caption{\label{fig:1Danal} Analytical solution for the 1D problem}
+\end{figure}
+
+\noindent Figures \ref{fig:methods10} and \ref{fig:methods100} highlights the distribution of temperature at two different times. At $t_1$ the different schemes produce different distributions. Forward and backward euler line up closely, in contrast to the Crank-nicolson scheme. At $t_2$ the temperature distribution is linear and all the schemes line up closely approaching the analytical solution as seen in figure \ref{fig:1Danal}.
 
 \begin{figure} [H]
 	\centering
@@ -459,7 +465,7 @@ c_2=\begin{bmatrix}
 \end{bmatrix}\\
 \vspace{0.5cm}
 \end{equation}
-The bottom boundary condition is used to evaluate the $b-$values. As$T_3(-120)=1300$, $c-$values are known, and $b_1,b_2$ are expressed with regard to $b_3$ (equation $robinerfortsattgay$), the $b-$values are easy to find.
+The bottom boundary condition is used to evaluate the $b-$values. As $T_3(-120)=1300$, $c-$values are known, and $b_1,b_2$ are expressed with regard to $b_3$ (equation $robinerfortsattgay$), the $b-$values are easy to find.
 
 \begin{equation}
 b_1=\begin{bmatrix}
@@ -474,7 +480,7 @@ b_2=\begin{bmatrix}
 -23.8\\
 \end{bmatrix}
 \end{equation}
-These values have been used in combination with equation $robinergay2$ to plot the analytic temperature distribution for the three layered lithosphere model without enrichment $(a_1,b_1,c_1)$ and with enrichment $(a_2,b_2,c_2)$(\ref{10analytic}). 
+These values have been used in combination with equation $robinergay2$ to plot the analytic temperature distribution for the three layered lithosphere model without enrichment $(a_1,b_1,c_1)$(\ref{10analyticNotEnriched}) and with enrichment $(a_2,b_2,c_2)$(\ref{10analyticEnriched}). 
 
 
 \begin{figure} [H]
@@ -535,7 +541,7 @@ Table \ref{truncstab} shows that, even though the Euler forward method is easy t
 \noindent Without any heat production, the temperature distribution would be a linearly dependent on depth. As the three layers have varying heat production, the distribution will not be linear. The larger amount of radioactive material in the crust results in a larger temperature increase in this layer. This can be read directly from the heat production, and is also mirrored in the plots representing temperature distribution before radioactive enrichment (Figure \ref{10notenriched}).\\ 
 
 
-\noindent After radioactive enrichment, the heat production of the mantle is altered. This increases the temperature in the bottom layer, which in turn increase the temperature throughout the entire model (Figure \ref{10enriched},\ref{10analytic}). The radioactive material consists of three different materials with different half-lives (Table \ref{Decay}). As stated earlier, the reduction of radioactive material is small compared to the time span Table \ref{Decay}). On account of this, it is a good approximation to disregard this effect.  
+\noindent After radioactive enrichment, the heat production of the mantle is altered. This increases the temperature in the bottom layer, which in turn increase the temperature throughout the entire model (Figure \ref{10enriched},\ref{10analyticEnriched}). The radioactive material consists of three different materials with different half-lives (Table \ref{Decay}). As stated earlier, the reduction of radioactive material is small compared to the time span Table \ref{Decay}). On account of this, it is a good approximation to disregard this effect.  
 
 
 
@@ -548,10 +554,10 @@ Three algorithms have been used in this project, each having different drawbacks
 
 
 
-
+\newpage
 \section*{References}
 
-\noindent - Hjorth-Jensen, M. (2015), Computational Physics, Lecture Notes Fall 2015, [Internet], Available from: \href{https://github.com/CompPhysics/ComputationalPhysics/blob/master/doc/Lectures/lectures2015.pdf}{\textcolor{blue}{https://github.com/CompPhysics/ComputationalPhysics/blob/master/doc/Lectures/lectures2015.pdf}}, [downloaded 28.11.2017]
+\noindent - Hjorth-Jensen, M. (2015), Computational Physics, Lecture Notes Fall 2015, [Internet], Available from: \url{https://github.com/CompPhysics/ComputationalPhysics/blob/master/doc/Lectures/lectures2015.pdf}, [downloaded 28.11.2017]
 
 
 \end{document}
