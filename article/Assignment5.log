@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.2)  9 DEC 2017 21:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.21)  9 DEC 2017 21:35
 entering extended mode
 **./Assignment5.tex
 (Assignment5.tex
@@ -439,7 +439,7 @@ Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen112
 \Gin@req@width=\dimen113
 )
-(C:\Users\sande\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.sty
+(C:\Users\vemun\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.sty
 \lst@mode=\count100
 \lst@gtempboxa=\box28
 \lst@token=\toks22
@@ -453,22 +453,22 @@ Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 \lst@lineno=\count105
 \lst@maxwidth=\dimen117
 
-(C:\Users\sande\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
+(C:\Users\vemun\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 \c@lstnumber=\count106
 \lst@skipnumbers=\count107
 \lst@framebox=\box29
 )
-(C:\Users\sande\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.cfg
+(C:\Users\vemun\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.cfg
 File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
-(C:\Users\sande\AppData\Roaming\MiKTeX\2.9\tex\latex\refstyle\refstyle.sty
+(C:\Users\vemun\AppData\Roaming\MiKTeX\2.9\tex\latex\refstyle\refstyle.sty
 Package: refstyle 2010/11/02 v0.5 Reference formatting (DNJ Els)
 Package refstyle Info: Config file refstyle.cfg used on input line 322.
 
-(C:\Users\sande\AppData\Roaming\MiKTeX\2.9\tex\latex\refstyle\refstyle.cfg
+(C:\Users\vemun\AppData\Roaming\MiKTeX\2.9\tex\latex\refstyle\refstyle.cfg
 File: refstyle.cfg 2010/11/02 0.5 Configuration file for refstyle (DNJ Els)
 Package refstyle Info: New reference template \newref{part} on input line 468.
 Package refstyle Info: \partkey created on input line 468.
@@ -527,13 +527,13 @@ Package refstyle Info: \fnrangeref created on input line 568.
 Package refstyle Info: \Fnrangeref created on input line 568.
 Package refstyle Info: \fnpageref created on input line 568.
 ))
-(C:\Users\sande\AppData\Roaming\MiKTeX\2.9\tex\latex\wasysym\wasysym.sty
+(C:\Users\vemun\AppData\Roaming\MiKTeX\2.9\tex\latex\wasysym\wasysym.sty
 Package: wasysym 2003/10/30 v2.0 Wasy-2 symbol support package
 \symwasy=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
 (Font)                  U/wasy/m/n --> U/wasy/b/n on input line 90.
 )
-(C:\Users\sande\AppData\Roaming\MiKTeX\2.9\tex\latex\subfigure\subfigure.sty
+(C:\Users\vemun\AppData\Roaming\MiKTeX\2.9\tex\latex\subfigure\subfigure.sty
 Package: subfigure 2002/07/30 v2.1.4 subfigure package
 \subfigtopskip=\skip46
 \subfigcapskip=\skip47
@@ -549,11 +549,11 @@ Package: subfigure 2002/07/30 v2.1.4 subfigure package
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
-(C:\Users\sande\AppData\Roaming\MiKTeX\2.9\tex\latex\subfigure\subfigure.cfg)
+(C:\Users\vemun\AppData\Roaming\MiKTeX\2.9\tex\latex\subfigure\subfigure.cfg)
 \subfig@top=\skip50
 \subfig@bottom=\skip51
 )
-(C:\Users\sande\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
+(C:\Users\vemun\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\bm.sty"
@@ -644,7 +644,7 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4751.
 \c@Hy@tempcnt=\count115
 
-(C:\Users\sande\AppData\Roaming\MiKTeX\2.9\tex\latex\url\url.sty
+(C:\Users\vemun\AppData\Roaming\MiKTeX\2.9\tex\latex\url\url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -681,7 +681,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip52
 )
-(C:\Users\sande\AppData\Roaming\MiKTeX\2.9\tex\latex\xcolor\xcolor.sty
+(C:\Users\vemun\AppData\Roaming\MiKTeX\2.9\tex\latex\xcolor\xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg"
@@ -724,7 +724,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks25
 \@floatcapt=\box31
 )
-(C:\Users\sande\AppData\Roaming\MiKTeX\2.9\tex\latex\commath\commath.sty
+(C:\Users\vemun\AppData\Roaming\MiKTeX\2.9\tex\latex\commath\commath.sty
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )) (Assignment5.aux)
@@ -745,7 +745,7 @@ LaTeX Font Info:    ... okay on input line 55.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 55.
 LaTeX Font Info:    ... okay on input line 55.
 
-(C:\Users\sande\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+(C:\Users\vemun\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count126
 \scratchdimen=\dimen132
@@ -851,7 +851,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Try loading font information for U+wasy on input line 84.
 
-(C:\Users\sande\AppData\Roaming\MiKTeX\2.9\tex\latex\wasysym\uwasy.fd
+(C:\Users\vemun\AppData\Roaming\MiKTeX\2.9\tex\latex\wasysym\uwasy.fd
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 )
 
@@ -1037,14 +1037,14 @@ File: ../plots/2Danal.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../plots/2Danal.pdf used on input line 411.
 (pdftex.def)             Requested size: 200.078pt x 150.05692pt.
 
-<../plots/contq10ma.pdf, id=412, 462.52798pt x 346.89601pt>
+<../plots/contq10ma.pdf, id=413, 462.52798pt x 346.89601pt>
 File: ../plots/contq10ma.pdf Graphic file (type pdf)
 
 <use ../plots/contq10ma.pdf>
 Package pdftex.def Info: ../plots/contq10ma.pdf used on input line 420.
 (pdftex.def)             Requested size: 200.078pt x 150.05692pt.
 
-<../plots/lineq10ma.pdf, id=413, 462.52798pt x 346.89601pt>
+<../plots/lineq10ma.pdf, id=414, 462.52798pt x 346.89601pt>
 File: ../plots/lineq10ma.pdf Graphic file (type pdf)
 
 <use ../plots/lineq10ma.pdf>
@@ -1070,32 +1070,37 @@ e pdfs with page group included in a single page
 
 pdfTeX warning: pdflatex (file ../plots/2Danal.pdf): PDF inclusion: multiple pd
 fs with page group included in a single page
->] <../plots/contheat10ma.pdf, id=542, 462.52798pt x 346.89601pt>
+>] <../plots/contheat10ma.pdf, id=543, 462.52798pt x 346.89601pt>
 File: ../plots/contheat10ma.pdf Graphic file (type pdf)
 
 <use ../plots/contheat10ma.pdf>
-Package pdftex.def Info: ../plots/contheat10ma.pdf used on input line 431.
+Package pdftex.def Info: ../plots/contheat10ma.pdf used on input line 429.
 (pdftex.def)             Requested size: 200.078pt x 150.05692pt.
 
-<../plots/lineheat10ma.pdf, id=543, 462.52798pt x 346.89601pt>
+<../plots/lineheat10ma.pdf, id=544, 462.52798pt x 346.89601pt>
 File: ../plots/lineheat10ma.pdf Graphic file (type pdf)
 
 <use ../plots/lineheat10ma.pdf>
-Package pdftex.def Info: ../plots/lineheat10ma.pdf used on input line 432.
+Package pdftex.def Info: ../plots/lineheat10ma.pdf used on input line 430.
 (pdftex.def)             Requested size: 200.078pt x 150.05692pt.
- [9pdfTeX warning (ext4): destination with the same identifier (name{figure.7})
- has been already used, duplicate ignored
+
+Underfull \hbox (badness 10000) in paragraph at lines 434--435
+
+ []
+
+[9pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) 
+has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.482 \end{equation}
-                    pdfTeX warning (ext4): destination with the same identifier
- (name{figure.8}) has been already used, duplicate ignored
+l.469 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+8}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.482 \end{equation}
-                     <../plots/contq10ma.pdf> <../plots/lineq10ma.pdf
+l.469 
+       <../plots/contq10ma.pdf> <../plots/lineq10ma.pdf
 
 pdfTeX warning: pdflatex (file ../plots/lineq10ma.pdf): PDF inclusion: multiple
  pdfs with page group included in a single page
@@ -1107,56 +1112,45 @@ ple pdfs with page group included in a single page
 
 pdfTeX warning: pdflatex (file ../plots/lineheat10ma.pdf): PDF inclusion: multi
 ple pdfs with page group included in a single page
->] <../plots/contanalnorich.pdf, id=715, 462.52798pt x 346.89601pt>
+>] <../plots/contanalnorich.pdf, id=718, 462.52798pt x 346.89601pt>
 File: ../plots/contanalnorich.pdf Graphic file (type pdf)
 
 <use ../plots/contanalnorich.pdf>
 Package pdftex.def Info: ../plots/contanalnorich.pdf used on input line 488.
 (pdftex.def)             Requested size: 200.078pt x 150.05692pt.
 
-<../plots/lineanalnorich.pdf, id=716, 462.52798pt x 346.89601pt>
+<../plots/lineanalnorich.pdf, id=719, 462.52798pt x 346.89601pt>
 File: ../plots/lineanalnorich.pdf Graphic file (type pdf)
 
 <use ../plots/lineanalnorich.pdf>
 Package pdftex.def Info: ../plots/lineanalnorich.pdf used on input line 489.
 (pdftex.def)             Requested size: 200.078pt x 150.05692pt.
 
-<../plots/contanal.pdf, id=717, 462.52798pt x 346.89601pt>
+<../plots/contanal.pdf, id=720, 462.52798pt x 346.89601pt>
 File: ../plots/contanal.pdf Graphic file (type pdf)
 
 <use ../plots/contanal.pdf>
 Package pdftex.def Info: ../plots/contanal.pdf used on input line 495.
 (pdftex.def)             Requested size: 200.078pt x 150.05692pt.
 
-<../plots/lineanal.pdf, id=718, 462.52798pt x 346.89601pt>
+<../plots/lineanal.pdf, id=721, 462.52798pt x 346.89601pt>
 File: ../plots/lineanal.pdf Graphic file (type pdf)
 
 <use ../plots/lineanal.pdf>
 Package pdftex.def Info: ../plots/lineanal.pdf used on input line 496.
 (pdftex.def)             Requested size: 200.078pt x 150.05692pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 526--528
-
- []
-
-[10pdfTeX warning (ext4): destination with the same identifier (name{figure.9})
- has been already used, duplicate ignored
+ [10pdfTeX warning (ext4): destination with the same identifier (name{figure.9}
+) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.528 
+l.522 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 10}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.528 
-      pdfTeX warning (ext4): destination with the same identifier (name{table.2
-}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.528 
+l.522 
        <../plots/contanalnorich.pdf> <../plots/lineanalnorich.pdf
 
 pdfTeX warning: pdflatex (file ../plots/lineanalnorich.pdf): PDF inclusion: mul
@@ -1170,50 +1164,62 @@ pdfs with page group included in a single page
 pdfTeX warning: pdflatex (file ../plots/lineanal.pdf): PDF inclusion: multiple 
 pdfs with page group included in a single page
 >]
-Underfull \hbox (badness 10000) in paragraph at lines 529--530
+Underfull \hbox (badness 10000) in paragraph at lines 528--530
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 531--533
+Underfull \hbox (badness 10000) in paragraph at lines 531--532
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 534--536
+Underfull \hbox (badness 10000) in paragraph at lines 533--535
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 541--542
+Underfull \hbox (badness 10000) in paragraph at lines 536--538
+
+ []
+
+[11pdfTeX warning (ext4): destination with the same identifier (name{table.2}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.543 \noindent
+                Without any heat production, the temperature distribution wo...
+]
+Underfull \hbox (badness 10000) in paragraph at lines 543--544
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 550--551
+Underfull \hbox (badness 10000) in paragraph at lines 552--553
 
  []
 
-[11] [12]
-Overfull \hbox (6.27919pt too wide) in paragraph at lines 560--561
+[12]
+Overfull \hbox (6.27919pt too wide) in paragraph at lines 562--563
 \OT1/cmr/m/n/10 able from: [][]$https : / / github . com / CompPhysics / Comput
 ationalPhysics / blob / master / doc / Lectures /
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 563.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 565.
 [13]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 563.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 565.
  (Assignment5.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 563.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 563.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 565.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 565.
 Package rerunfilecheck Info: File `Assignment5.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 563.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 565.
  ) 
 Here is how much of TeX's memory you used:
  9781 strings out of 493323
  135821 string characters out of 3139066
- 250533 words of memory out of 3000000
+ 250558 words of memory out of 3000000
  13062 multiletter control sequences out of 15000+200000
  15539 words of font info for 59 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1230,9 +1236,9 @@ b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Prog
 ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/
 MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2
 .9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on Assignment5.pdf (13 pages, 11178657 bytes).
+Output written on Assignment5.pdf (13 pages, 11180831 bytes).
 PDF statistics:
- 888 PDF objects out of 1000 (max. 8388607)
+ 896 PDF objects out of 1000 (max. 8388607)
  91 named destinations out of 1000 (max. 500000)
  91 words of extra memory for PDF output out of 10000 (max. 10000000)
 
