@@ -74,12 +74,13 @@ We have developed a program to simulate temperature distribution and development
 \section*{Introduction}
 The aim of this project is to use three different finite difference schemes to simulate temperature variations for three different models. The three schemes are the implicit Euler backward, explicit Euler forward and the Crank-Nicolson scheme. The latter being a combination of the Euler forward and backward schemes. These schemes can be used to simulate a variety of physical phenomena, but for simplicity will here be discussed in terms of temperature only.\\ 
 
-\noindent The first part will mostly revolve around idealized situations in one and two dimensions. This is followed by a three layered model of the Earths lithosphere, where each has different parameters of heat production. The three layered model will be simulated two times. Once for initial heat production parameters, and once where the heat production of the bottom layer (mantle) is increased by just over an order of magnitude. To get a benchmark for the simulations,the analytic solutions were calculated. All the code, runs and figures for the project is accessible \href{https://github.com/VemundStenbekkThorkildsen/Assignment5}{\textcolor{blue}{here}}.  
+\noindent The first part will mostly revolve around idealized situations in one and two dimensions. This is followed by a three layered model of the Earths lithosphere, where each has different parameters of heat production. The three layered model will be simulated two times. Once for initial heat production parameters, and once where the heat production of the bottom layer (mantle) is increased by just over an order of magnitude. To get a benchmark for the simulations,the analytic solutions were calculated. All the code, data and figures for the project is accessible at the github repository \href{https://github.com/VemundStenbekkThorkildsen/Assignment5}{\textcolor{blue}{here}}.  
 
 
 
 \section*{Method}
 
+\subsubsection*{The explicit and implicit schemes}
 \noindent The three different schemes are differential equations that can be rewritten as a set of linear equations. The Euler backwards scheme is implicit, as it uses the current step $i$, to derive the previous step $i-1$.
 \\
 \begin{equation}
@@ -194,9 +195,8 @@ B = \begin{bmatrix}
 0 & \cdots & \cdots & -1 & 2\\
 \end{bmatrix}
 \end{equation}
-
-
-\subsection*{Analytical solution in 1 dimension}
+\vspace{0.5cm}
+\subsubsection*{Analytical solution in 1 dimension}
 \noindent The analytic solution for the one dimensional at equilibrium can be solved by using:
 
 
@@ -218,8 +218,8 @@ which gives:
 \rightarrow u(x,t)_{t\rightarrow\infty}=x
 \end{equation}
 \noindent In other words, a linear graph.\\
-
-\subsection*{Analytical solution in 2 dimensions}
+\vspace{0.5cm}
+\subsubsection*{Analytical solution in 2 dimensions}
 The solution for two dimensions is somewhat harder to solve, but starts in the same manner as the one dimensional case. That is:\\
 
 \begin{equation}
@@ -277,15 +277,8 @@ u(x,y)=\sum^\infty_{n=1}A_nsinh(n\pi x)sin(n\pi y)
 \end{equation}
 
 \noindent The integral has solutions for odd $n = \frac{2}{n\pi}$, and even $n = 0$. Now the problem can be solved analytically. The correct solution is given by letting $n \rightarrow \infty$, but a good approximation can be found by letting $n$ run from $0$ to $100$. 
-
-
-
-
-
-
-
-
-\subsection*{Analytical solution of the three layer model}
+\vspace{0.5cm}
+\subsubsection*{Analytical solution of the three layer model}
 
 \noindent The analytic solution for the three layer model in one dimension can be solved by considering the heat equation at equilibrium:\\
 
@@ -346,7 +339,6 @@ T_1(-20)=T_2(-20),\hspace{0.5cm} T_2(-40)=T_3(-40), \hspace{0.5cm}T_3(-120)=1300
 
 
 
-\newpage
 \section*{Results}
 
 
@@ -521,7 +513,7 @@ Sum					 & 			 & 100 \% 				 & 84.44 \%\\
 
 \noindent Table \ref{Decay} is showing that a lot of the radioactive material is present even one billion years after the enrichment. The $Q$-value (heat production) before and after enrichment for the mantle is respectively $0,05$ and $0,55$. After one billion years $Q_{1Gy}=0.46442$, which is not a big reduction considering the vast time span.   
 
-\newpage
+
 \section*{Discussion}
 
 Table \ref{truncstab} shows that, even though the Euler forward method is easy to implement, there are serious limitations for the stability. The Euler backward and Crank-nicolson schemes are stable for all $\Delta x$ and $\Delta t$, but the implementation is more complicated. As the euler forward and Crank-nicolson uses a tridiagonal solver in the computation process, it is expected to be slower than the Euler forward scheme, which uses a more direct approach. Figure \ref{fig:unstable} shows that the forward Euler fluctuates a lot when the stability condition is violated. The stable schemes actually produce correct results, but are drowned by the fluctuations of the forward Euler. 
@@ -546,7 +538,7 @@ Table \ref{truncstab} shows that, even though the Euler forward method is easy t
 
 
 
-\newpage
+
 \section*{Concluding remarks}
 Three algorithms have been used in this project, each having different drawbacks and advantages. The explicit forward Euler scheme is efficient and easy to implement, but has a rigorous stability condition for step size. The implicit Euler backward is stable for all step sizes, but is less efficient, as it uses a tridiagonal solver in the computation process. The Crank-Nicolson scheme is stable for all step sizes in addition to providing the smallest truncation error of the schemes. The drawback of this method is somewhat similar to the Euler backward scheme, as both use a tridiagonal solver.\\ 
 
@@ -555,7 +547,7 @@ Three algorithms have been used in this project, each having different drawbacks
 
 
 
-\newpage
+
 \section*{References}
 
 \noindent - Hjorth-Jensen, M. (2015), Computational Physics, Lecture Notes Fall 2015, [Internet], Available from: \href{https://github.com/CompPhysics/ComputationalPhysics/blob/master/doc/Lectures/lectures2015.pdf}{\textcolor{blue}{https://github.com/CompPhysics/ComputationalPhysics/blob/master/doc/Lectures/lectures2015.pdf}}, [downloaded 28.11.2017]
