@@ -80,10 +80,7 @@ The aim of this project is to use three different finite difference schemes to s
 
 \section*{Method}
 
-\noindent The three different schemes are differential equations that can be rewritten as a set of linear equations. The Euler forward is explicit, the Euler backward is implicit, while the Crank-Nicolson scheme is a combination of the two preceding schemes. These systems can be rewritten as sets of linear equations. \\
-
-
-\noindent The Euler backwards scheme is implicit, as it uses the current step $i$, to derive the previous step $i-1$. 
+\noindent The three different schemes are differential equations that can be rewritten as a set of linear equations. The Euler backwards scheme is implicit, as it uses the current step $i$, to derive the previous step $i-1$.
 \\
 \begin{equation}
 u_t \approx \frac{u(x_i,t_j) - u(x_i,t_j - \Delta t)}{\Delta t}
@@ -93,7 +90,7 @@ u_t \approx \frac{u(x_i,t_j) - u(x_i,t_j - \Delta t)}{\Delta t}
 u_{xx} \approx \frac{u(x_i + \Delta x,t_j) - 2u(x_i,t_j) + u(x_i - \Delta x,t_j)}{\Delta x^2}
 \end{equation}
 
-\noindent It is possible to scale the above equation by $\alpha = \Delta t / \Delta x^2$, so the equation only depends on one scaled variable. This leads to:
+\noindent After a Taylor expansion, it is possible to scale the equations by $\alpha = \Delta t / \Delta x^2$, so the equation only depends on one scaled variable (Hjorth-Jensen, 2015, page 305). This leads to:
 
 \begin{equation}
 u_{i,j-1} = -\alpha u_{i-1,j} + (1 + 2\alpha)u_{i,j} - \alpha u_{i+1,j}
@@ -111,7 +108,7 @@ A = \begin{bmatrix}
 \end{bmatrix}
 \end{equation}
 
-\noindent It is now possible to find the previous vector $V_{j-1}$ when $V_j$ is known.This means that it is essential to have initial conditions to start the calculations. A more generalized equation can be written as:
+\noindent It is now possible to find the previous vector $V_{j-1}$ when $V_j$ is known. This means that it is essential to have initial conditions to start the calculations. A more generalized equation can be written as:
 
 \begin{equation}
 A^{-1}(AV_j) = A^{-1}(V_{j-1})
@@ -158,13 +155,15 @@ V_{j+1} = AVj
 V_{j+1}= A^{j+1}V_{0}
 \end{equation}
 
-\noindent The Crank-Nicolson scheme is is a combination of both the implicit Euler backward and explicit Euler forward scheme.
+\noindent The Crank-Nicolson scheme is is a combination of both the implicit Euler backward and explicit Euler forward scheme, so a the same method is applied here.
 
 \begin{equation}
 \frac{\theta}{\Delta x^2}(u_{i-1,j} - 2u_{i,j} + u_{i+1,j}) + \frac{1 - \theta}{\Delta x^2}(u_{i+1,j-1} - 2u_{i,j-1} + u_{i-1,j-1}) = \frac{1}{\Delta t}(u_{i,j} - u_{i,j-1})
 \end{equation}
 
-\noindent Where $\theta$ determines whether the scheme is explicit when $\theta = 0$, or implicit when $\theta = 1$. However, to get the actual Crank-Nicolson scheme, it is required to have $\theta = 1/2$. This is stable for all $\Delta x$ and $\Delta t$. The Crank-Nicolson scheme is derived by Taylor expanding the forward Euler method $u(x,t + \Delta t)$, $u(x + \Delta x,t)$, $u(x - \Delta x,t)$, $u(x + \Delta x, t + \Delta t)$ and $u(x + \Delta x, t + \Delta t)$ for $t + \Delta t/2$.\\
+\noindent Where $\theta$ determines whether the scheme is explicit when $\theta = 0$, or implicit when $\theta = 1$. However, to get the actual Crank-Nicolson scheme, it is required to have $\theta = 1/2$. The Crank-Nicolson scheme is derived by Taylor expanding the forward Euler method $u(x,t + \Delta t)$, $u(x + \Delta x,t)$, $u(x - \Delta x,t)$, $u(x + \Delta x, t + \Delta t)$ and $u(x - \Delta x, t + \Delta t)$ for $t + \Delta t/2$.\\
+
+\noindent From the Taylor expansion, a truncation error occurs in the form of $O(\Delta x^2)$ and $O(\Delta t^2)$ when the inserted into the approximations for the derivative. A summary for all the truncation errors can be found on Table \ref{truncstab} (Hjorth-Jensen, 2015, page 311).\\
 
 \noindent Scaling the equation with $\alpha = \frac{\Delta t}{\Delta x^2}$ gives the following equation:
 
@@ -193,6 +192,7 @@ B = \begin{bmatrix}
 0 & \cdots & \cdots & -1 & 2\\
 \end{bmatrix}
 \end{equation}
+
 
 
 \noindent The analytic solution for the one dimensional at equilibrium can be solved by using:
@@ -259,7 +259,7 @@ u(x,y)=\sum^\infty_{n=1}A_nsinh(n\pi x)sin(n\pi y)
 
 
 \begin{equation}
-\int_0^1 1*sin(n\pi y) dy = \int_0^1 \sum^\infty_{n=1}A_nsinh(n\pi 1)2sin(n\pi y)
+\int_0^1 1*sin(n\pi y) dy = \int_0^1 \sum^\infty_{n=1}A_nsinh(n\pi 1)sin(n\pi y)^2
 \end{equation}
 
 \begin{equation}
@@ -272,7 +272,7 @@ u(x,y)=\sum^\infty_{n=1}A_nsinh(n\pi x)sin(n\pi y)
 \frac{2}{sinh(n\pi)}\int_0^1sin(n\pi y) dy
 \end{equation}
 
-The integral has solutions for odd $n = \frac{2}{n\pi}$, and even $n = 0$. Now the problem can be solved analytically. The correct solution is given by letting $n \rightarrow \infty$, but a good approximation can be found by letting $n$ run from $0$ to $100$. 
+\noindent The integral has solutions for odd $n = \frac{2}{n\pi}$, and even $n = 0$. Now the problem can be solved analytically. The correct solution is given by letting $n \rightarrow \infty$, but a good approximation can be found by letting $n$ run from $0$ to $100$. 
 
 
 
@@ -321,7 +321,7 @@ T_2(-40)=T_2(-40)
 \noindent These conditions make it possible to express $b_1$ and $b_2$, by $b_3$.
 \noindent These relations have been used to find the $b-$ and $c$-values using:
 \begin{equation}
-T_1(20)=T_2(20),\hspace{0.5cm} T_2(40)=T_3(40), \hspace{0.5cm}T_3(120)=1300
+T_1(-20)=T_2(-20),\hspace{0.5cm} T_2(-40)=T_3(-40), \hspace{0.5cm}T_3(-120)=1300
 \end{equation}
 
 
@@ -553,6 +553,8 @@ Three algorithms have been used in this project, each having different drawbacks
 
 \newpage
 \section*{References}
+
+\noindent - Hjorth-Jensen, M. (2015), Computational Physics, Lecture Notes Fall 2015, [Internet], Available from: \href{https://github.com/CompPhysics/ComputationalPhysics/blob/master/doc/Lectures/lectures2015.pdf}{\textcolor{blue}{https://github.com/CompPhysics/ComputationalPhysics/blob/master/doc/Lectures/lectures2015.pdf}}, [downloaded 28.11.2017]
 
 
 \end{document}
